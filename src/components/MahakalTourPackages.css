@@ -1,4 +1,4 @@
-/* MahakalTourPackages.css */
+/* MahakalTourPackages.css - Enhanced Responsiveness */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
@@ -21,15 +21,17 @@
 .mahakal-tour-container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 40px 40px;
+  padding: 40px 20px; /* Reduced side padding for smaller screens */
   font-family: 'Poppins', sans-serif;
   background-color: white;
   color: var(--text-dark);
+  width: 100%;
+  box-sizing: border-box; /* Ensure padding is included in width */
 }
 
 .mahakal-header {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px; /* Slightly reduced for mobile */
 }
 
 .mahakal-tour-title {
@@ -37,6 +39,7 @@
   color: var(--text-dark);
   margin-bottom: 15px;
   font-weight: 700;
+  word-wrap: break-word; /* Prevents text overflow on small screens */
 }
 
 .divine-line {
@@ -72,6 +75,7 @@
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 30px;
   justify-content: center;
+  width: 100%;
 }
 
 .mahakal-package-card {
@@ -85,7 +89,8 @@
   flex-direction: column;
   padding: 0;
   cursor: pointer;
-  width: 300px;
+  width: 100%; /* Changed from fixed 300px to 100% */
+  max-width: 350px; /* Added max-width for larger screens */
   gap: 10px;
   margin: 0 auto;
 }
@@ -127,8 +132,10 @@
 
 .package-header {
   text-align: center;
-  padding: 0 25px;
-  margin-bottom: 20px;
+  padding: 0 15px; /* Reduced padding for smaller screens */
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .package-title {
@@ -136,6 +143,7 @@
   font-size: 1.4rem;
   margin: 5px 0;
   font-weight: 600;
+  word-wrap: break-word; /* Prevents text overflow */
 }
 
 .package-subtitle {
@@ -147,8 +155,10 @@
 
 .package-price {
   text-align: center;
-  margin-bottom: 25px;
-  padding: 0 25px;
+  margin-bottom: 20px; /* Slightly reduced */
+  padding: 0 15px; /* Reduced padding */
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .price-value {
@@ -173,12 +183,15 @@
 .feature-divider {
   height: 1px;
   background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.1), transparent);
-  margin: 0 25px 25px;
+  margin: 0 15px 20px; /* Adjusted margins */
+  width: calc(100% - 30px); /* Ensures proper width */
 }
 
 .package-details {
-  padding: 0 25px;
-  margin-bottom: 20px;
+  padding: 0 15px; /* Reduced padding */
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .detail-label {
@@ -191,6 +204,7 @@
 .package-duration {
   margin-bottom: 15px;
   display: flex;
+  flex-wrap: wrap; /* Allow wrapping if needed */
 }
 
 .detail-value {
@@ -206,6 +220,7 @@
   color: var(--text-medium);
   margin-bottom: 8px;
   position: relative;
+  word-wrap: break-word; /* For longer text items */
 }
 
 .package-includes li::marker {
@@ -213,19 +228,26 @@
 }
 
 .package-description {
-  padding: 0 25px;
-  margin-bottom: 25px;
+  padding: 0 15px; /* Reduced padding */
+  margin-bottom: 20px;
   font-size: 0.9rem;
   color: var(--text-light);
   line-height: 1.6;
   flex-grow: 1;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.package-description p {
+  margin: 0;
+  word-wrap: break-word; /* Ensures text doesn't overflow */
 }
 
 .book-now-btn {
   background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
   color: white;
   border: none;
-  padding: 12px 25px;
+  padding: 12px 20px; /* Slightly reduced padding */
   font-weight: 600;
   cursor: pointer;
   transition: var(--transition);
@@ -233,8 +255,9 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  margin: 0 25px 25px;
+  margin: 0 15px 20px; /* Adjusted margins */
   border-radius: 6px;
+  width: calc(100% - 30px); /* Ensures proper width */
 }
 
 .book-now-btn:hover {
@@ -250,20 +273,42 @@
   transform: translateX(5px);
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
+/* Enhanced Responsive Design */
+@media (max-width: 1200px) {
   .mahakal-packages-grid {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .mahakal-tour-container {
+    padding: 30px 15px;
+  }
+  
+  .mahakal-packages-grid {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
   }
   
   .mahakal-tour-title {
     font-size: 2.2rem;
   }
+  
+  .package-icon-wrapper {
+    width: 75px;
+    height: 75px;
+  }
 }
 
 @media (max-width: 768px) {
+  .mahakal-tour-container {
+    padding: 25px 12px;
+  }
+  
   .mahakal-packages-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
     justify-items: center;
   }
   
@@ -274,30 +319,106 @@
   .package-icon-wrapper {
     width: 70px;
     height: 70px;
-    margin-top: 17px;
+    margin-top: 15px;
   }
   
   .package-icon {
     font-size: 2.2rem;
   }
-}
-
-@media (max-width: 480px) {
-  .mahakal-packages-grid {
-    grid-template-columns: 1fr;
-    place-items: center;
-  }
-  
-  .mahakal-package-card {
-    max-width: 90%;
-    width: 100%;
-  }
-  
-  .mahakal-tour-title {
-    font-size: 1.8rem;
-  }
   
   .package-title {
     font-size: 1.3rem;
+  }
+  
+  .price-value {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .mahakal-packages-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+  
+  .mahakal-tour-title {
+    font-size: 1.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mahakal-tour-container {
+    padding: 20px 10px;
+  }
+  
+  .mahakal-header {
+    margin-bottom: 30px;
+  }
+  
+  .mahakal-packages-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .mahakal-package-card {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .mahakal-tour-title {
+    font-size: 1.7rem;
+  }
+  
+  .package-title {
+    font-size: 1.25rem;
+  }
+  
+  .package-icon-wrapper {
+    width: 65px;
+    height: 65px;
+  }
+  
+  .package-icon {
+    font-size: 2rem;
+  }
+  
+  .book-now-btn {
+    padding: 10px 16px;
+  }
+}
+
+@media (max-width: 380px) {
+  .mahakal-tour-title {
+    font-size: 1.5rem;
+  }
+  
+  .package-header {
+    padding: 0 10px;
+  }
+  
+  .package-title {
+    font-size: 1.2rem;
+  }
+  
+  .package-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .package-price {
+    padding: 0 10px;
+  }
+  
+  .price-value {
+    font-size: 1.7rem;
+  }
+  
+  .package-details, 
+  .package-description {
+    padding: 0 10px;
+  }
+  
+  .book-now-btn {
+    margin: 0 10px 15px;
+    width: calc(100% - 20px);
+    padding: 10px 15px;
   }
 }
