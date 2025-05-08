@@ -118,7 +118,7 @@ export default function TourPackageCards() {
           font-family: Arial, sans-serif;
           max-width: 1400px;
           margin: 0 auto;
-          padding: 20px;
+           padding:20px;
           box-sizing: border-box;
           overflow: hidden;
         }
@@ -210,6 +210,7 @@ export default function TourPackageCards() {
         .highlight-text {
           color: #ff6600;
           font-weight: bold;
+          margin-right:10px;
         }
 
         .itinerary-btn {
@@ -432,6 +433,8 @@ export default function TourPackageCards() {
         }
 
         @media (max-width: 576px) {
+
+
           .package-cards {
             grid-template-columns: 1fr;
           }
@@ -454,7 +457,7 @@ export default function TourPackageCards() {
           }
           
           .tour-container {
-            padding: 15px 10px;
+            padding: 40px 20px;
           }
           
           .overlay-text h2 {
