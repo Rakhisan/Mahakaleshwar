@@ -41,9 +41,6 @@ function App() {
             element={
               <>
                 <MahakaleshwarContent />
-                <TemplePages />
-                <BhasmaAartiPage />
-                <WeatherGuidePage />
               </>
             }
           />
