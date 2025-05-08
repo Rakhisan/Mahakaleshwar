@@ -1,0 +1,153 @@
+/* Temple Section Styles */
+.temples-section {
+    padding: 60px 8px;
+    background-color: white;
+  }
+  
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 40px;
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+    font-weight: 700;
+  }
+  
+  .section-subtitle {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 40px;
+    color: #666;
+  }
+  
+  .temple-grid {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding-left: 35px;
+
+  }
+  
+  .temple-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 295px;
+    gap: 10px;
+  }
+  
+  .temple-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  .temple-image {
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .temple-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .temple-card:hover .temple-image img {
+    transform: scale(1.1);
+  }
+  
+  .temple-info {
+    padding: 20px;
+  }
+  
+  .temple-name {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #d96704;
+    font-weight: 600;
+  }
+  
+  .temple-location {
+    font-size: 14px;
+    color: #ff8c00;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  
+  .temple-description {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  .temple-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .temple-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .view-btn {
+    background-color: transparent;
+    border: 1px solid #d96704;
+    color: #d96704;
+  }
+  
+  .view-btn:hover {
+    background-color: #d96704;
+    color: white;
+  }
+  
+  .book-btn {
+    background-color: #ff8c00;
+    color: white;
+    border: 1px solid #ff8c00;
+  }
+  
+  .book-btn:hover {
+    background-color: #e67e00;
+  }
+  
+  /* Responsive Styles */
+  @media screen and (max-width: 768px) {
+    .temple-grid {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 4fr));
+      gap: 20px;
+    }
+    
+    .section-title {
+      font-size: 28px;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .temple-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .temples-section {
+      padding: 40px 0;
+    }
+    
+    .temple-image {
+      height: 180px;
+    }
+  }
