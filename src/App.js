@@ -14,6 +14,8 @@ import MahakaleshwarContent from "./components/Mahakaleshwar/MahakaleshwarConten
 import TemplePages from "./components/Mahakaleshwar/TemplePages";
 import BhasmaAartiPage from "./components/Mahakaleshwar/BhasmaAartiPage";
 import WeatherGuidePage from "./components/Mahakaleshwar/WeatherGuidePage";
+import FestivalMahakal from "./components/Mahakaleshwar/FestivalMahakal";
+import HistoryMahakal from "./components/Mahakaleshwar/HistoryMahakal";
 // import Footer from "./components/Footer";
 
 function App() {
@@ -50,6 +52,11 @@ function App() {
             element={<BhasmaAartiPage />}
           />
           <Route path="/mahakaleshwar/weather" element={<WeatherGuidePage />} />
+          <Route
+            path="/mahakaleshwar/festivals"
+            element={<FestivalMahakal />}
+          />
+          <Route path="/mahakaleshwar/history" element={<HistoryMahakal />} />
         </Routes>
       </Router>
     </div>
