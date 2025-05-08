@@ -5,117 +5,122 @@ import m5 from "../images/m5.jpg";
 import m6 from "../images/m6.jpg";
 
 export default function TourPackageCards() {
-  const [activeTab, setActiveTab] = useState(0);
+    const [activeTab, setActiveTab] = useState(0);
 
-  const packages = [
-    {
-      title: "Mahakaleshwar Darshan by Helicopter",
-      duration: "1 Day (Same Day Return)",
-      route: "Indore → Ujjain → Indore",
-      price: "55,000/-",
-      originalPrice: "60,000/-",
-      features: ["VIP Darshan", "Helicopter", "Hotel", "Meals", "Sightseeing"],
-      image: m3,
-    },
-    {
-      title: "Ujjain & Omkareshwar Jyotirling Darshan",
-      duration: "2 Days & 1 Night",
-      route: "Indore → Omkareshwar → Ujjain → Indore",
-      price: "85,000/-",
-      originalPrice: "90,000/-",
-      features: ["VIP Darshan", "Helicopter", "Hotel", "Meals", "Sightseeing"],
-      image: m4,
-    },
-    {
-      title: "Ujjain Mahakal with Local Sightseeing",
-      duration: "1 Day",
-      route:
-        "Ujjain → Mahakaleshwar → Kal Bhairav → Ram Ghat → Sandipani Ashram",
-      price: "5,999/-",
-      originalPrice: "6,999/-",
-      features: ["VIP Darshan", "Hotel", "Meals", "Sightseeing"],
-      image: m5,
-    },
-    {
-      title: "Panch Jyotirling Yatra by Helicopter",
-      duration: "4 Days & 3 Nights",
-      route:
-        "Ujjain → Omkareshwar → Bhimashankar → Trimbakeshwar → Grishneshwar",
-      price: "2,20,000/-",
-      originalPrice: "2,30,000/-",
-      features: ["VIP Darshan", "Helicopter", "Hotel", "Meals", "Sightseeing"],
-      image: m6,
-    },
-  ];
+    const packages = [
+        {
+            title: "Mahakaleshwar Darshan by Helicopter",
+            duration: "1 Day (Same Day Return)",
+            route: "Indore → Ujjain → Indore",
+            price: "55,000/-",
+            originalPrice: "60,000/-",
+            features: ["VIP Darshan", "Helicopter", "Hotel", "Meals", "Sightseeing"],
+            image: m3,
+        },
+        {
+            title: "Ujjain & Omkareshwar Jyotirling Darshan",
+            duration: "2 Days & 1 Night",
+            route: "Indore → Omkareshwar → Ujjain → Indore",
+            price: "85,000/-",
+            originalPrice: "90,000/-",
+            features: ["VIP Darshan", "Helicopter", "Hotel", "Meals", "Sightseeing"],
+            image: m4,
+        },
+        {
+            title: "Ujjain Mahakal with Local Sightseeing",
+            duration: "1 Day",
+            route:
+                "Ujjain → Mahakaleshwar → Kal Bhairav → Ram Ghat → Sandipani Ashram",
+            price: "5,999/-",
+            originalPrice: "6,999/-",
+            features: ["VIP Darshan", "Hotel", "Meals", "Sightseeing"],
+            image: m5,
+        },
+        {
+            title: "Panch Jyotirling Yatra by Helicopter",
+            duration: "4 Days & 3 Nights",
+            route:
+                "Ujjain → Omkareshwar → Bhimashankar → Trimbakeshwar → Grishneshwar",
+            price: "2,20,000/-",
+            originalPrice: "2,30,000/-",
+            features: ["VIP Darshan", "Helicopter", "Hotel", "Meals", "Sightseeing"],
+            image: m6,
+        },
+    ];
 
-  return (
-    <div className="tour-container">
-      <h1 className="main-heading">
-        Mahakaleshwar Yatra Tour Helicopter Packages
-      </h1>
-      <div className="divine-line"></div>
-      {/* <p className="sub-heading">Get the most effective and the best Mahakaleshwar Yatra packages. <span className="read-more-link">Read More</span></p> */}
+    return (
+        <div className="tour-container">
+            <h1 className="main-heading">
+                Mahakaleshwar Yatra Tour Helicopter Packages
+            </h1>
+            <div className="divine-line"></div>
+            
+            {/* <p className="sub-heading">Get the most effective and the best Mahakaleshwar Yatra packages. <span className="read-more-link">Read More</span></p> */}
 
-      <div className="package-cards">
-        {packages.map((pkg, index) => (
-          <div className="package-card" key={index}>
-            <div
-              className="card-image"
-              style={{ backgroundImage: `url(${pkg.image})` }}
-            >
-              <div className="overlay-text">
-                <h2>{pkg.title}</h2>
-                <span className="highlight-text">By Helicopter</span>
-                <button className="itinerary-btn">Complete Itinerary</button>
-              </div>
+            <div className="package-cards">
+                {
+                    packages.map((pkg, index) => (
+                        <div className="package-card" key={index}>
+                            <div
+                                className="card-image"
+                                style={{ backgroundImage: `url(${pkg.image})` }}
+                            >
+                                <div className="overlay-text">
+                                    <h2>{pkg.title}</h2>
+                                    <span className="highlight-text">By Helicopter</span>
+                                    <button className="itinerary-btn">Complete Itinerary</button>
+                                </div>
+                            </div>
+
+                            <div className="package-details">
+                                <div className="upper-content">
+                                    <h3 className="package-title">{pkg.title}</h3>
+
+                                    <div className="detail-row">
+                                        <div className="icon-wrapper duration">
+                                            <span className="icon">🕒</span>
+                                            <span>{pkg.duration}</span>
+                                        </div>
+                                    </div>
+
+                                    <div className="detail-row">
+                                        <div className="icon-wrapper route">
+                                            <span className="icon">📍</span>
+                                            <span>{pkg.route}</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="lower-content">
+                                    <div className="price-row">
+                                        <span className="price">₹ {pkg.price}</span>
+                                        <span className="original-price">₹ {pkg.originalPrice}</span>
+                                        <span className="per-person">per person</span>
+                                    </div>
+
+                                    <div className="action-buttons">
+                                        <a href="#" className="btn read-more">
+                                            Read More »
+                                        </a>
+                                        <a href="#" className="btn enquiry-now">
+                                            Enquiry Now »
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    ))
+                }
             </div>
 
-            <div className="package-details">
-              <div className="upper-content">
-                <h3 className="package-title">{pkg.title}</h3>
-
-                <div className="detail-row">
-                  <div className="icon-wrapper duration">
-                    <span className="icon">🕒</span>
-                    <span>{pkg.duration}</span>
-                  </div>
-                </div>
-
-                <div className="detail-row">
-                  <div className="icon-wrapper route">
-                    <span className="icon">📍</span>
-                    <span>{pkg.route}</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="lower-content">
-                <div className="price-row">
-                  <span className="price">₹ {pkg.price}</span>
-                  <span className="original-price">₹ {pkg.originalPrice}</span>
-                  <span className="per-person">per person</span>
-                </div>
-
-                <div className="action-buttons">
-                  <a href="#" className="btn read-more">
-                    Read More »
-                  </a>
-                  <a href="#" className="btn enquiry-now">
-                    Enquiry Now »
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <style jsx>{`
+            <style jsx>{`
         .tour-container {
           font-family: Arial, sans-serif;
           max-width: 1400px;
           margin: 0 auto;
           padding: 20px;
+          box-sizing: border-box;
+          overflow: hidden;
         }
 
         .main-heading {
@@ -152,21 +157,31 @@ export default function TourPackageCards() {
         }
 
         .package-cards {
-          display: flex;
-          flex-wrap: wrap;
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
           gap: 20px;
           justify-content: center;
+          width: 100%;
+          box-sizing: border-box;
         }
 
         .package-card {
-          width: 310px;
+          width: 100%;
+          max-width: 100%;
           background-color: white;
           border-radius: 8px;
           overflow: hidden;
           box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
           display: flex;
           flex-direction: column;
-          height: 520px; /* Fixed height for all cards */
+          min-height: 480px; /* Minimum height for consistent appearance */
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          box-sizing: border-box;
+        }
+
+        .package-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
 
         .card-image {
@@ -257,6 +272,9 @@ export default function TourPackageCards() {
 
         .price-row {
           margin-bottom: 15px;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: baseline;
         }
 
         .price {
@@ -291,6 +309,7 @@ export default function TourPackageCards() {
           font-size: 14px;
           text-align: center;
           display: inline-block;
+          transition: background-color 0.3s ease;
         }
 
         .read-more {
@@ -299,10 +318,18 @@ export default function TourPackageCards() {
           flex: 1;
         }
 
+        .read-more:hover {
+          background-color: #3d9140;
+        }
+
         .enquiry-now {
           background-color: #e46e0f;
           color: white;
           flex: 1;
+        }
+
+        .enquiry-now:hover {
+          background-color: #c15c0d;
         }
 
         .features {
@@ -358,21 +385,83 @@ export default function TourPackageCards() {
           margin-right: 10px;
         }
 
+        /* Improved responsive styles */
+        @media (max-width: 1200px) {
+          .package-cards {
+            grid-template-columns: repeat(3, 1fr);
+          }
+          
+          .main-heading {
+            font-size: 2.2rem;
+          }
+        }
+
+        @media (max-width: 992px) {
+          .package-cards {
+            grid-template-columns: repeat(2, 1fr);
+          }
+          
+          .main-heading {
+            font-size: 2rem;
+          }
+        }
+
         @media (max-width: 768px) {
           .package-cards {
-            flex-direction: column;
-            align-items: center;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
           }
-
+          
+          .main-heading {
+            font-size: 1.8rem;
+          }
+          
           .package-card {
+            min-height: 450px;
+          }
+          
+          .price-row {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+          
+          .original-price, .per-person {
+            margin-left: 0;
+            margin-top: 2px;
+          }
+        }
+
+        @media (max-width: 576px) {
+          .package-cards {
+            grid-template-columns: 1fr;
+          }
+          
+          .package-card {
+            max-width: 100%;
+            min-height: auto;
+          }
+          
+          .action-buttons {
+            flex-direction: column;
+          }
+          
+          .btn {
             width: 100%;
-            max-width: 340px;
-            height: auto; /* Allow height to adjust on mobile */
+          }
+          
+          .main-heading {
+            font-size: 1.5rem;
+          }
+          
+          .tour-container {
+            padding: 15px 10px;
+          }
+          
+          .overlay-text h2 {
+            font-size: 18px;
           }
         }
       `}</style>
-    </div>
-  );
+        </div>
+    );
 }
-
-//iiiiiiii
