@@ -14,6 +14,12 @@ import MahakaleshwarContent from "./components/Mahakaleshwar/MahakaleshwarConten
 import TemplePages from "./components/Mahakaleshwar/TemplePages";
 import BhasmaAartiPage from "./components/Mahakaleshwar/BhasmaAartiPage";
 import WeatherGuidePage from "./components/Mahakaleshwar/WeatherGuidePage";
+import FestivalMahakal from "./components/Mahakaleshwar/FestivalMahakal";
+import HistoryMahakal from "./components/Mahakaleshwar/HistoryMahakal";
+import ArchitectureMahakal from "./components/Mahakaleshwar/ArchitectureMahakal";
+import HowToReachMahakal from "./components/Mahakaleshwar/HowToReachMahakal";
+import NearbyAttractionsMahakal from "./components/Mahakaleshwar/NearbyAttractionsMahakal";
+import VisitingGuidelinesMahakal from "./components/Mahakaleshwar/VisitingGuidelinesMahakal";
 // import Footer from "./components/Footer";
 
 function App() {
@@ -41,9 +47,6 @@ function App() {
             element={
               <>
                 <MahakaleshwarContent />
-                <TemplePages />
-                <BhasmaAartiPage />
-                <WeatherGuidePage />
               </>
             }
           />
@@ -53,6 +56,27 @@ function App() {
             element={<BhasmaAartiPage />}
           />
           <Route path="/mahakaleshwar/weather" element={<WeatherGuidePage />} />
+          <Route
+            path="/mahakaleshwar/festivals"
+            element={<FestivalMahakal />}
+          />
+          <Route path="/mahakaleshwar/history" element={<HistoryMahakal />} />
+          <Route
+            path="/mahakaleshwar/architecture"
+            element={<ArchitectureMahakal />}
+          />
+          <Route
+            path="/mahakaleshwar/how-to-reach"
+            element={<HowToReachMahakal />}
+          />
+          <Route
+            path="/mahakaleshwar/guidelines"
+            element={<VisitingGuidelinesMahakal />}
+          />
+          <Route
+            path="/mahakaleshwar/nearby-attractions"
+            element={<NearbyAttractionsMahakal />}
+          />
         </Routes>
       </Router>
     </div>

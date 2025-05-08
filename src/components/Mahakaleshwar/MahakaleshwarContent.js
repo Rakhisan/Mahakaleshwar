@@ -3,11 +3,11 @@ import React from "react";
 
 import { Routes, Route, Link } from "react-router-dom";
 import HomePage from "./HomePage";
-import TemplePages from "./TemplePages";
-import BhasmaAartiPage from "./BhasmaAartiPage";
-import WeatherGuidePage from "./WeatherGuidePage";
-// import FestivalsPage from './components/FestivalsPage';
-// import HistoryPage from './components/HistoryPage';
+// import TemplePages from "./TemplePages";
+// import BhasmaAartiPage from "./BhasmaAartiPage";
+// import WeatherGuidePage from "./WeatherGuidePage";
+// import FestivalMahakal from "./components/FestivalMahakal";
+// import HistoryMahakal from "./components/HistoryMahakal";
 // import ArchitecturePage from './components/ArchitecturePage';
 // import HowToReachPage from './components/HowToReachPage';
 // import GuidelinesPage from './components/GuidelinesPage';
@@ -20,13 +20,13 @@ const MahakaleshwarContent = () => {
     <div className="main-content">
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/temple" element={<TemplePages />} />
+        {/* <Route path="/temple" element={<TemplePages />} />
         <Route path="/bhasma-aarti" element={<BhasmaAartiPage />} />
-        <Route path="/weather" element={<WeatherGuidePage />} />
-
-        {/* <Route path="/festivals" element={<FestivalsPage />} />
-        <Route path="/history" element={<HistoryPage />} />
-        <Route path="/architecture" element={<ArchitecturePage />} />
+        <Route path="/weather" element={<WeatherGuidePage />} /> */}
+        {/*
+        <Route path="/festivals" element={<FestivalMahakal />} />
+        <Route path="/history" element={<HistoryMahakal />} /> */}
+        {/* <Route path="/architecture" element={<ArchitecturePage />} />
         <Route path="/how-to-reach" element={<HowToReachPage />} />
         <Route path="/guidelines" element={<GuidelinesPage />} />
         <Route path="/nearby-attractions" element={<NearbyAttractionsPage />} /> */}
