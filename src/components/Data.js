@@ -33,7 +33,7 @@ export const guideCards = [
   },
   {
     id: 3,
-    title: "Weather Guide",
+    title: "Mahakaleshwar Weather ",
     slug: "weather",
     image: ma3,
     description:

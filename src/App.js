@@ -20,6 +20,7 @@ import ArchitectureMahakal from "./components/Mahakaleshwar/ArchitectureMahakal"
 import HowToReachMahakal from "./components/Mahakaleshwar/HowToReachMahakal";
 import NearbyAttractionsMahakal from "./components/Mahakaleshwar/NearbyAttractionsMahakal";
 import VisitingGuidelinesMahakal from "./components/Mahakaleshwar/VisitingGuidelinesMahakal";
+import ContactForm from "./components/Mahakaleshwar/ContactForm";
 // import Footer from "./components/Footer";
 
 function App() {
@@ -78,6 +79,7 @@ function App() {
             element={<NearbyAttractionsMahakal />}
           />
         </Routes>
+        <ContactForm />
       </Router>
     </div>
   );
