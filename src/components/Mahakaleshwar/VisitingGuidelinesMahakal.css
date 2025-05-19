@@ -1,0 +1,157 @@
+/* * Contact Section */ 
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  .section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  
+  .section-title h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+  }
+  
+  .section-title::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+  }
+
+.contact-info {
+    margin-bottom: 30px;
+  }
+  
+  .contact-info .info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    background-color: transparent;
+    padding: 0;
+    text-align: left;
+  }
+  
+  .contact-info .info-item i {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-right: 15px;
+    min-width: 20px;
+  }
+  
+  .map-container {
+    margin-top: 30px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .contact-form {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--text-dark);
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  textarea.form-control {
+    height: 150px;
+    resize: vertical;
+  }
+  
+  .form-control:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(217, 103, 4, 0.3);
+  }
+  
+  .contact-form .btn {
+    margin-top: 15px;
+    width: 100%;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 992px) {
+    .two-column {
+      grid-template-columns: 1fr;
+    }
+    
+    .aarti-dos-donts {
+      grid-template-columns: 1fr;
+    }
+    
+    .timeline-content {
+      width: 90%;
+      left: 5% !important;
+    }
+    
+    .history-timeline::before {
+      left: 20px;
+      transform: none;
+    }
+    
+    .timeline-marker {
+      left: 20px;
+      transform: none;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+    
+    .section-title h2 {
+      font-size: 1.8rem;
+    }
+    
+    .info-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+    
+    .hero p {
+      font-size: 1rem;
+    }
+    
+    .section-title h2 {
+      font-size: 1.5rem;
+    }
+    
+    .card-container {
+      grid-template-columns: 1fr;
+    }
+  }

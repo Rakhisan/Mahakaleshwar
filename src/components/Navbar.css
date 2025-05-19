@@ -1,0 +1,264 @@
+/* NavbarStyles.css */
+:root {
+  --primary-color: #e46e0f;
+  --secondary-color: #c04b1d;
+  --accent-color: #e6dbce;
+  --light-color: #f8e6cc;
+  --dark-color: #e46e0f;
+  --text-dark: #333;
+  --text-light: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+.header {
+  width: 100%;
+  position: relative;
+}
+
+/* Top Navigation Menu */
+.top-nav {
+  background-color: var(--primary-color);
+  padding: 0 15px;
+}
+
+.top-menu {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+}
+
+.top-menu li {
+  position: relative;
+}
+
+.top-menu li a {
+  display: block;
+  padding: 12px 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.top-menu li a:hover {
+  background-color: var(--dark-color);
+  color: var(--text-light);
+}
+
+.top-menu li a.highlight {
+  background-color: var(--dark-color);
+  color: var(--text-light);
+}
+
+/* Site Branding - Middle Section */
+.site-branding {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px;
+  background-color: var(--light-color);
+  
+}
+
+.site-title {
+  text-align: center;
+}
+
+.site-title h1 {
+  color: var(--primary-color);
+  font-size: 32px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.site-subtitle {
+  color: var(--dark-color);
+  font-style: italic;
+}
+
+.tourism-badge-img, .bells-img {
+  max-height: 50px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-end; */
+  gap: 5px;
+}
+
+.call-us, .mail-us, .app-download {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  color: var(--dark-color);
+}
+
+.call-us a, .mail-us a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.whatsapp-icon, .email-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Main Navigation with Dropdowns */
+.main-nav {
+  background-color: var(--dark-color);
+}
+
+.main-menu {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: space-around;
+}
+
+.main-menu > li {
+  position: relative;
+}
+
+.main-menu > li > a {
+  display: block;
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.main-menu > li > a:hover {
+  background-color: var(--primary-color);
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--accent-color);
+  min-width: 220px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 100;
+  list-style: none;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 12px 15px;
+  color: var(--text-dark);
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.dropdown-menu li a:hover {
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+}
+
+/* Mobile Menu Toggles */
+.mobile-menu-toggle, .main-menu-toggle {
+  display: none;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  border: none;
+  padding: 10px 15px;
+  font-size: 18px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+  .site-branding {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .contact-info {
+    margin-top: 10px;
+    align-items: center;
+  }
+  
+  .top-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .top-menu li {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .main-menu {
+    flex-direction: column;
+  }
+  
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-menu-toggle, .main-menu-toggle {
+    display: block;
+  }
+  
+  .top-nav, .main-nav {
+    display: none;
+  }
+  
+  .top-nav.show, .main-nav.show {
+    display: block;
+  }
+  
+  .site-title {
+    margin-bottom: 15px;
+  }
+  
+  .tourism-badge, .temple-bells {
+    margin: 5px 0;
+  }
+  
+  .contact-info {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .call-us, .mail-us, .app-download {
+    justify-content: center;
+  }
+  
+  .main-menu > li > a {
+    text-align: left;
+    padding-left: 30px;
+  }
+  
+  .dropdown-menu li a {
+    padding-left: 45px;
+  }
+}

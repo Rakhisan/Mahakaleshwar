@@ -1,0 +1,68 @@
+{
+  "name": "ujjain",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "lucide-react": "^0.487.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-helmet": "^6.1.0",
+    "react-router-dom": "^7.5.0",
+    "react-scripts": "5.0.1",
+    "react-social-icons": "^6.24.0",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "postbuild": "cross-env PUPPETE_EXECUTABLE_PATH=\"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" npx react-snap",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "reactSnap": {
+    "source": "build",
+    "inlineCss": true,
+    "puppeteerExecutablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "include": [
+      "/",
+      "/mahakaleshwar",
+      "/mahakaleshwar/temple",
+      "/mahakaleshwar/bhasma-aarti",
+      "/mahakaleshwar/weather",
+      "/mahakaleshwar/festivals",
+      "/mahakaleshwar/history",
+      "/mahakaleshwar/architecture",
+      "/mahakaleshwar/how-to-reach",
+      "/mahakaleshwar/guidelines",
+      "/mahakaleshwar/nearby-attractions"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-optional-chaining": "^7.21.0",
+    "@craco/craco": "^7.1.0",
+    "cross-env": "^7.0.3",
+    "react-snap": "^1.23.0"
+  }
+}

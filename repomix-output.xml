@@ -1,0 +1,6255 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+<additional_info>
+
+</additional_info>
+
+</file_summary>
+
+<directory_structure>
+.gitignore
+package.json
+public/index.html
+public/manifest.json
+public/robots.txt
+README.md
+src/App.css
+src/App.js
+src/App.test.js
+src/components/Data.js
+src/components/Footer.css
+src/components/Footer.js
+src/components/HeroComponent.css
+src/components/HeroComponent.js
+src/components/HeroSection.css
+src/components/HeroSection.js
+src/components/HotelCard.css
+src/components/HotelCard.js
+src/components/Mahakaleshwar/ArchitectureMahakal.js
+src/components/Mahakaleshwar/BhasmaAartiPage.js
+src/components/Mahakaleshwar/ContactForm.css
+src/components/Mahakaleshwar/ContactForm.js
+src/components/Mahakaleshwar/FestivalMahakal.js
+src/components/Mahakaleshwar/HistoryMahakal.js
+src/components/Mahakaleshwar/HomePage.js
+src/components/Mahakaleshwar/HowToReachMahakal.js
+src/components/Mahakaleshwar/MahakaleshwarContent.css
+src/components/Mahakaleshwar/MahakaleshwarContent.js
+src/components/Mahakaleshwar/NearbyAttractionsMahakal.js
+src/components/Mahakaleshwar/TemplePages.js
+src/components/Mahakaleshwar/VisitingGuidelinesMahakal.css
+src/components/Mahakaleshwar/VisitingGuidelinesMahakal.js
+src/components/Mahakaleshwar/WeatherGuidePage.css
+src/components/Mahakaleshwar/WeatherGuidePage.js
+src/components/MahakalTourPackages.css
+src/components/MahakalTourPackages.js
+src/components/Navbar.css
+src/components/Navbar.js
+src/components/TemplePage.js
+src/components/TempleSection.css
+src/components/TempleSection.js
+src/components/TourPackageCards.js
+src/global.css
+src/index.css
+src/index.js
+src/logo.svg
+src/reportWebVitals.js
+src/setupTests.js
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path=".gitignore">
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+</file>
+
+<file path="package.json">
+{
+  "name": "ujjain",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "lucide-react": "^0.487.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-helmet": "^6.1.0",
+    "react-router-dom": "^7.5.0",
+    "react-scripts": "5.0.1",
+    "react-social-icons": "^6.24.0",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "postbuild": "cross-env PUPPETE_EXECUTABLE_PATH=\"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" npx react-snap",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "reactSnap": {
+    "source": "build",
+    "inlineCss": true,
+    "puppeteerExecutablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "include": [
+      "/",
+      "/mahakaleshwar",
+      "/mahakaleshwar/temple",
+      "/mahakaleshwar/bhasma-aarti",
+      "/mahakaleshwar/weather",
+      "/mahakaleshwar/festivals",
+      "/mahakaleshwar/history",
+      "/mahakaleshwar/architecture",
+      "/mahakaleshwar/how-to-reach",
+      "/mahakaleshwar/guidelines",
+      "/mahakaleshwar/nearby-attractions"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-optional-chaining": "^7.21.0",
+    "@craco/craco": "^7.1.0",
+    "cross-env": "^7.0.3",
+    "react-snap": "^1.23.0"
+  }
+}
+</file>
+
+<file path="public/index.html">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- <meta
+      name="description"
+      content="Web site created using create-react-app"
+    /> -->
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <!-- <title>Ujjain Mahakal</title> -->
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>
+</file>
+
+<file path="public/manifest.json">
+{
+  "short_name": "React App",
+  "name": "Create React App Sample",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
+</file>
+
+<file path="public/robots.txt">
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Disallow:
+</file>
+
+<file path="README.md">
+<<<<<<< HEAD
+# Getting Started with Create React App
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=======
+# Mahakaleshwar
+>>>>>>> d92970a261b083f4d6e604c5cdd31a8550df380a
+</file>
+
+<file path="src/App.css">
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+</file>
+
+<file path="src/App.js">
+import logo from "./logo.svg";
+import "./App.css";
+import "./global.css";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HeroSection from "./components/HeroSection";
+import HotelCardContainer from "./components/HotelCard";
+import MahakalTourPackages from "./components/MahakalTourPackages";
+import TempleSection from "./components/TempleSection";
+import TourPackageCards from "./components/TourPackageCards";
+// import HeroComponent from './components/HeroComponent';
+import Navbar from "./components/Navbar";
+import MahakaleshwarContent from "./components/Mahakaleshwar/MahakaleshwarContent";
+import TemplePages from "./components/Mahakaleshwar/TemplePages";
+import BhasmaAartiPage from "./components/Mahakaleshwar/BhasmaAartiPage";
+import WeatherGuidePage from "./components/Mahakaleshwar/WeatherGuidePage";
+import FestivalMahakal from "./components/Mahakaleshwar/FestivalMahakal";
+import HistoryMahakal from "./components/Mahakaleshwar/HistoryMahakal";
+import ArchitectureMahakal from "./components/Mahakaleshwar/ArchitectureMahakal";
+import HowToReachMahakal from "./components/Mahakaleshwar/HowToReachMahakal";
+import NearbyAttractionsMahakal from "./components/Mahakaleshwar/NearbyAttractionsMahakal";
+import VisitingGuidelinesMahakal from "./components/Mahakaleshwar/VisitingGuidelinesMahakal";
+import ContactForm from "./components/Mahakaleshwar/ContactForm";
+// import Footer from "./components/Footer";
+
+function App() {
+  return (
+    <div className="App">
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <HeroSection />
+                <TourPackageCards />
+                <MahakalTourPackages />
+                <TempleSection />
+                <HotelCardContainer />
+                {/* <Footer /> */}
+              </>
+            }
+          />
+
+          <Route
+            index
+            path="/mahakaleshwar"
+            element={
+              <>
+                <MahakaleshwarContent />
+              </>
+            }
+          />
+          <Route path="/mahakaleshwar/temple" element={<TemplePages />} />
+          <Route
+            path="/mahakaleshwar/bhasma-aarti"
+            element={<BhasmaAartiPage />}
+          />
+          <Route path="/mahakaleshwar/weather" element={<WeatherGuidePage />} />
+          <Route
+            path="/mahakaleshwar/festivals"
+            element={<FestivalMahakal />}
+          />
+          <Route path="/mahakaleshwar/history" element={<HistoryMahakal />} />
+          <Route
+            path="/mahakaleshwar/architecture"
+            element={<ArchitectureMahakal />}
+          />
+          <Route
+            path="/mahakaleshwar/how-to-reach"
+            element={<HowToReachMahakal />}
+          />
+          <Route
+            path="/mahakaleshwar/guidelines"
+            element={<VisitingGuidelinesMahakal />}
+          />
+          <Route
+            path="/mahakaleshwar/nearby-attractions"
+            element={<NearbyAttractionsMahakal />}
+          />
+        </Routes>
+        <ContactForm />
+      </Router>
+    </div>
+  );
+}
+
+export default App;
+</file>
+
+<file path="src/App.test.js">
+import { render, screen } from '@testing-library/react';
+import App from './App';
+
+test('renders learn react link', () => {
+  render(<App />);
+  const linkElement = screen.getByText(/learn react/i);
+  expect(linkElement).toBeInTheDocument();
+});
+</file>
+
+<file path="src/components/Data.js">
+// Data.js - File containing all the data to be used across components
+
+import ma1 from "../images/ma1.png";
+import ma2 from "../images/ma2.jpg";
+import ma3 from "../images/ma3.jpg";
+import ma4 from "../images/ma4.jpeg";
+import ma5 from "../images/ma5.jpg";
+import ma6 from "../images/ma6.jpeg";
+import ma7 from "../images/ma7.webp";
+import ma8 from "../images/ma8.jpg";
+import ma9 from "../images/ma9.jpg";
+
+export const guideCards = [
+  {
+    id: 1,
+    title: "Mahakaleshwar Temple",
+    slug: "temple",
+    image: ma1,
+    description:
+      "One of the 12 Jyotirlingas, the Mahakaleshwar temple is dedicated to Lord Shiva and holds immense religious significance.",
+    content:
+      "The Mahakaleshwar Temple is one of the most ancient and sacred Hindu temples dedicated to Lord Shiva. Located in the holy city of Ujjain, it is one of the 12 Jyotirlingas in India and is considered one of the most powerful. The temple has five levels, with the idol of Mahakaleshwar being placed on the lowest level. The lingam at Mahakal is believed to be swayambhu (self-manifested) and faces south, which is a unique feature. The temple complex covers a large area and includes many smaller shrines.",
+  },
+  {
+    id: 2,
+    title: "Bhasma Aarti",
+    slug: "bhasma-aarti",
+    image: ma2,
+    description:
+      "Experience the divine Bhasma Aarti, a unique ritual performed during the early hours of the morning.",
+    content:
+      "Bhasma Aarti is a divine ritual performed at the Mahakaleshwar Temple during the early hours of the morning, typically starting at 4:00 AM. It is a special form of worship where the lingam is bathed with ash (bhasma) from funeral pyres. This ritual is unique to the Mahakaleshwar Temple and attracts thousands of devotees daily. During the aarti, the Shivalinga is decorated with various offerings including ash, sandalwood paste, flowers, and milk, while priests chant Vedic hymns. The ritual concludes with the distribution of prasad to devotees.",
+  },
+  {
+    id: 3,
+    title: "Mahakaleshwar Weather ",
+    slug: "weather",
+    image: ma3,
+    description:
+      "Plan your visit to Mahakaleshwar with our comprehensive weather guide for all seasons.",
+    content:
+      "Ujjain experiences three main seasons: Summer (March to June) with temperatures ranging from 30°C to 45°C, Monsoon (July to September) with moderate rainfall, and Winter (October to February) with temperatures ranging from 8°C to 25°C. The best time to visit Mahakaleshwar Temple is during the winter months when the weather is pleasant for sightseeing and temple visits. During summer, it's advisable to visit the temple early morning or evening. Monsoon brings lush greenery to the area but occasional heavy rains might affect your travel plans.",
+  },
+  {
+    id: 4,
+    title: "Festivals at Mahakaleshwar",
+    slug: "festivals",
+    image: ma4,
+    description:
+      "Discover the vibrant festivals celebrated at Mahakaleshwar throughout the year.",
+    content:
+      "The Mahakaleshwar Temple celebrates numerous festivals throughout the year with great fervor. Mahashivratri is the most significant festival, celebrated in February/March with special rituals, continuous abhishekams, and cultural programs. Navratri, dedicated to Goddess Durga, is celebrated twice a year. Other important festivals include Kartik Purnima, Shravan month celebrations (July-August), and Nag Panchami. During these festivals, the temple is beautifully decorated, and special rituals are performed, attracting thousands of devotees from across the country.",
+  },
+  {
+    id: 5,
+    title: "Temple History",
+    slug: "history",
+    image: ma5,
+    description:
+      "Explore the rich history and legends associated with the ancient Mahakaleshwar Temple.",
+    content:
+      "The Mahakaleshwar Temple has a rich history dating back to ancient times. According to Hindu mythology, the temple was built by King Chandrasena of the Paramara dynasty in the 11th century. However, historical records indicate that the temple existed much before that period. The temple has witnessed several destructions and reconstructions throughout history, with the current structure being built by the Maratha general Ranoji Shinde in the 18th century. The temple's historical significance is also mentioned in ancient Hindu texts like the Puranas, which describe Ujjain as one of the seven sacred cities of Hindu pilgrimage.",
+  },
+  {
+    id: 6,
+    title: "Temple Architecture",
+    slug: "architecture",
+    image: ma6,
+    description:
+      "Marvel at the magnificent architecture and spiritual design of the Mahakaleshwar Temple.",
+    content:
+      "The Mahakaleshwar Temple showcases a blend of Maratha, Bhumija, and South Indian architectural styles. The temple has a spacious courtyard with massive walls and a main shrine with five levels. The sanctum sanctorum houses the linga of Lord Mahakaleshwar, facing south. The temple's entrance is adorned with intricate carvings depicting various mythological scenes. The temple features a shikhara (spire) that rises majestically, symbolizing a cosmic mountain. The interior walls are adorned with beautiful paintings and sculptures depicting various forms of Lord Shiva and scenes from Hindu mythology.",
+  },
+  {
+    id: 7,
+    title: "How to Reach",
+    slug: "how-to-reach",
+    image: ma7,
+    description:
+      "Find the best ways to reach Mahakaleshwar Temple from different parts of India.",
+    content:
+      "Ujjain is well-connected by road, rail, and air. The nearest airport is Devi Ahilyabai Holkar Airport in Indore, about 55 km away. Ujjain has its own railway station with good connectivity to major cities across India. Regular buses and taxis are available from nearby cities like Indore, Bhopal, and Ahmedabad. From Ujjain city center, the temple is easily accessible by auto-rickshaws, taxis, or even by walking if you're staying nearby. The temple is located in the heart of Ujjain city, making it easily accessible from any part of the city.",
+  },
+  {
+    id: 8,
+    title: "Visiting Guidelines",
+    slug: "guidelines",
+    image: ma9,
+    description:
+      "Essential guidelines and etiquette for visitors to ensure a meaningful temple experience.",
+    content:
+      "When visiting the Mahakaleshwar Temple, certain guidelines should be followed. Dress modestly, with shoulders and knees covered. Remove footwear before entering the temple premises. Photography is prohibited inside the main sanctum. Carrying electronic devices and leather items inside the temple is discouraged. The temple is open from 4:00 AM to 11:00 PM, with a break from 12:30 PM to 3:30 PM. For Bhasma Aarti, arrive at least 1 hour before the scheduled time. Special darshan and pooja arrangements can be made through the temple administration. Maintain silence and respect the sanctity of the temple during your visit.",
+  },
+  {
+    id: 9,
+    title: "Nearby Attractions",
+    slug: "nearby-attractions",
+    image: ma8,
+    description:
+      "Explore other places of interest near Mahakaleshwar Temple during your visit to Ujjain.",
+    content:
+      "While in Ujjain, you can visit several other attractions near the Mahakaleshwar Temple. Ram Ghat on the banks of Shipra River is a serene spot for evening aarti. Harsiddhi Temple, dedicated to Goddess Annapurna, is famous for its artistic architecture. Kal Bhairav Temple houses a unique deity that accepts liquor offerings. Mangalnath Temple is considered the birthplace of Mars planet. Sandipani Ashram is believed to be where Lord Krishna received his education. Chintaman Ganesh Temple is one of the oldest Ganesh temples in India. These attractions are all within 5-10 km from the Mahakaleshwar Temple and can be covered in a day's visit.",
+  },
+];
+
+export const hotels = [
+  {
+    id: 1,
+    name: "Hotel Rudraksh",
+    image: "/images/hotel1.jpg",
+    price: "₹2500 - ₹5000",
+    distance: "0.5 km from Temple",
+    rating: 4.5,
+  },
+  {
+    id: 2,
+    name: "Shipra Residency",
+    image: "/images/hotel2.jpg",
+    price: "₹1800 - ₹3500",
+    distance: "1.2 km from Temple",
+    rating: 4.2,
+  },
+  {
+    id: 3,
+    name: "Ujjain Palace Hotel",
+    image: "/images/hotel3.jpeg",
+    price: "₹3500 - ₹8000",
+    distance: "0.8 km from Temple",
+    rating: 4.7,
+  },
+];
+
+export const packages = [
+  {
+    id: 1,
+    name: "Mahakal Darshan Package",
+    image: "/images/package1.jpg",
+    duration: "1 Day",
+    price: "₹999 per person",
+    includes: "Temple visit, Bhasma Aarti, Breakfast, Guide",
+  },
+  {
+    id: 2,
+    name: "Ujjain Spiritual Tour",
+    image: "/images/package2.jpg",
+    duration: "2 Days / 1 Night",
+    price: "₹2999 per person",
+    includes: "Hotel, All meals, Temple visits, Transportation",
+  },
+  {
+    id: 3,
+    name: "Complete Ujjain Darshan",
+    image: "/images/package3.jpg",
+    duration: "3 Days / 2 Nights",
+    price: "₹4999 per person",
+    includes: "Hotel, All meals, All attractions, Pooja items, Guide",
+  },
+];
+</file>
+
+<file path="src/components/Footer.css">
+/* FooterContent.module.css */
+
+  /* FooterContent.module.css */
+  .footer {
+    background-color: white; /* Changed to black */
+    color: black;
+  }
+  
+  .container {
+   
+    max-width: 1200px; /* Set container width to 1200px */
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .logoContainer {
+    margin-bottom: 1rem; /* mb-4 */
+    max-width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .logoLink {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  .logo {
+    height: 1.5rem; /* h-6 */
+  }
+  
+  .divider {
+    width: 100%;
+    height: 1px;
+    background-color: #e8eaf1; /* bg-blue-800 */
+    margin-bottom: 1rem; /* mb-4 */
+  }
+  
+  .contentWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem; /* gap-8 */
+    margin-bottom: 1rem; /* mb-4 */
+    max-width: 1275px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  @media (min-width: 1024px) {
+    .contentWrapper {
+      flex-direction: row;
+    }
+  }
+  
+  .locationsGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem; /* gap-6 */
+    max-width: 1275px;
+    padding-top: 2.5rem; /* pt-10 */
+  }
+  
+  @media (min-width: 640px) {
+    .locationsGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .locationsGrid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  .locationCard {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  
+  .locationHeader {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* gap-2 */
+  }
+  
+  .locationCity {
+    font-size: 1.125rem; /* text-lg */
+    font-weight: 600; /* font-semibold */
+  }
+  
+  .flag {
+    height: 1.5rem; /* h-6 */
+    width: 2.5rem; /* w-10 */
+  }
+  
+  .locationText {
+    font-size: 0.875rem; /* text-sm */
+  }
+  
+  .phoneContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+  }
+  
+  .phoneWrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* gap-2 */
+    font-size: 0.875rem; /* text-sm */
+  }
+  
+  .phoneIcon {
+    width: 1rem; /* w-4 */
+    height: 1rem; /* h-4 */
+    color: #60a5fa; /* text-blue-400 */
+    flex-shrink: 0;
+  }
+  
+  .phoneLink {
+    color: #e5e7eb; /* text-gray-200 */
+    transition: color 0.3s;
+  }
+  
+  .phoneLink:hover {
+    color: #93c5fd; /* text-blue-300 */
+  }
+  
+  .contactsContainer {
+    width: auto;
+  }
+  
+  @media (min-width: 1024px) {
+    .contactsContainer {
+      width: 18rem; /* lg:w-72 */
+    }
+  }
+  
+  .contactsHeading {
+    font-size: 1.25rem; /* text-xl */
+    font-weight: 700; /* font-bold */
+    margin-bottom: 1rem; /* mb-4 */
+    color: white;
+  }
+  
+  .contactsContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* space-y-6 */
+  }
+  
+  .contactGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* space-y-2 */
+  }
+  
+  .contactItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* gap-2 */
+  }
+  
+  .contactIcon {
+    width: 1.25rem; /* w-5 */
+    height: 1.25rem; /* h-5 */
+    color: #60a5fa; /* text-blue-400 */
+    flex-shrink: 0;
+  }
+  
+  .contactLink {
+    color: #e5e7eb; /* text-gray-200 */
+    transition: color 0.3s;
+  }
+  
+  .contactLink:hover {
+    color: #93c5fd; /* text-blue-300 */
+  }
+  
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  @media (min-width: 768px) {
+    .footer {
+      flex-direction: row;
+    }
+  }
+  
+  .copyrightSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem; /* gap-2 */
+    margin-bottom: 0.5rem; /* mb-2 */
+  }
+  
+  @media (min-width: 768px) {
+    .copyrightSection {
+      flex-direction: row;
+      margin-bottom: 0;
+    }
+  }
+  
+  .copyrightText {
+    font-size: 0.875rem; /* text-sm */
+    color: #d1d5db; /* text-gray-300 */
+  }
+  
+  .legalLinks {
+    display: flex;
+    gap: 0.5rem; /* gap-2 */
+  }
+  
+  .legalLink {
+    font-size: 0.875rem; /* text-sm */
+    color: #d1d5db; /* text-gray-300 */
+    transition: color 0.3s;
+  }
+  
+  .legalLink:hover {
+    color: #93c5fd; /* text-blue-300 */
+  }
+  
+  .socialIcons {
+    display: flex;
+    gap: 1rem; /* gap-4 */
+    margin-bottom: 0.5rem; /* mb-2 */
+  }
+  
+  .socialIcon {
+    color: #d1d5db; /* text-gray-300 */
+    transition: color 0.3s;
+  }
+  
+  .socialIcon:hover {
+    color: #93c5fd; /* text-blue-300 */
+}
+</file>
+
+<file path="src/components/Footer.js">
+// FooterContent.js
+import { Mail, Phone } from "lucide-react";
+import { SocialIcon } from "react-social-icons";
+import { Link } from "react-router-dom"; // OR use <a> if React Router isn't used
+
+import "./Footer.css"; // Import CSS normally in React
+
+const locations = [
+  {
+    city: "Indore",
+    address: "1206 , Skye Earth Corporate Park",
+    location: "Indore , Madhya Pradesh",
+    postalCode: "452010",
+    phone: "+91 9039383183",
+    flagUrl: "https://flagicons.lipis.dev/flags/4x3/in.svg",
+    alt: "India Flag",
+  },
+  {
+    city: "Dubai",
+    address: "Duja Towers, Sheikh Zayed Road",
+    location: "Dubai",
+    postalCode: "UAE",
+    phone: "+971-522627630",
+    flagUrl: "https://flagicons.lipis.dev/flags/4x3/ae.svg",
+    alt: "UAE Flag",
+  },
+  {
+    city: "USA",
+    address: "5101 34th St #A Lubbock,",
+    location: "Texas",
+    postalCode: "79410",
+    phone: "+1(438) 802-8521",
+    flagUrl: "https://flagicons.lipis.dev/flags/4x3/us.svg",
+    alt: "USA Flag",
+  },
+  {
+    city: "UK",
+    address: "135 Junction Rd, Archway",
+    location: "London",
+    postalCode: "N19 5PX",
+    phone: "+44-7727731075",
+    flagUrl: "https://flagicons.lipis.dev/flags/4x3/gb.svg",
+    alt: "UK Flag",
+  },
+];
+
+const contacts = {
+  phones: ["+91 9039383183", "+91 8319635887"],
+  emails: ["hr@digiflex.ai", "info@digiflex.ai"],
+};
+
+const socialLinks = [
+  { url: "https://www.instagram.com/questdigiflex", network: "instagram" },
+  { url: "https://www.facebook.com/questdigiflex", network: "facebook" },
+  { url: "https://x.com/QuestDigiflex", network: "x" },
+  { url: "https://linkedin.com/company/quest-digiflex", network: "linkedin" },
+  { url: "https://whatsapp.me/9111454949", network: "whatsapp" },
+  { url: "https://www.youtube.com/@QuestDigiflex", network: "youtube" },
+  { url: "https://in.pinterest.com/questdigiflex/", network: "pinterest" },
+  { url: "https://digiflex.quora.com/", network: "quora" },
+  { url: "https://medium.com/@questdigiflex", network: "medium" },
+];
+
+const FooterContent = () => (
+  <footer className="footer">
+    <div className="container">
+      <div className="logoContainer">
+        <Link to="/" className="logoLink">
+          <img
+            src="/us/app/images/logo.png"
+            width={200}
+            height={300}
+            alt="logo"
+            className="logo"
+          />
+        </Link>
+      </div>
+
+      <div className="divider"></div>
+
+      <div className="contentWrapper">
+        <div className="locationsGrid">
+          {locations.map((loc, index) => (
+            <div key={index} className="locationCard">
+              <div className="locationHeader">
+                <h2 className="locationCity">{loc.city}</h2>
+                <img
+                  src={loc.flagUrl}
+                  alt={loc.alt}
+                  width={40}
+                  height={24}
+                  className="flag"
+                />
+              </div>
+              <p className="locationText">{loc.address}</p>
+              {loc.location && <p className="locationText">{loc.location}</p>}
+              {loc.postalCode && (
+                <p className="locationText">{loc.postalCode}</p>
+              )}
+              {loc.phone && (
+                <div className="phoneContainer">
+                  <div className="phoneWrapper">
+                    <Phone className="phoneIcon" />
+                    <a
+                      href={`tel:${loc.phone.replace(/[^\d+]/g, "")}`}
+                      className="phoneLink"
+                    >
+                      {loc.phone}
+                    </a>
+                  </div>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+
+        <div className="contactsContainer">
+          <h2 className="contactsHeading">Contacts</h2>
+          <div className="contactsContent">
+            <div className="contactGroup">
+              {contacts.phones.map((phone, index) => (
+                <div key={index} className="contactItem">
+                  <Phone className="contactIcon" />
+                  <a
+                    href={`tel:${phone.replace(/[^\d+]/g, "")}`}
+                    className="contactLink"
+                  >
+                    {phone}
+                  </a>
+                </div>
+              ))}
+            </div>
+            <div className="contactGroup">
+              {contacts.emails.map((email, index) => (
+                <div key={index} className="contactItem">
+                  <Mail className="contactIcon" />
+                  <a href={`mailto:${email}`} className="contactLink">
+                    {email}
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="divider"></div>
+
+      <div className="footerBottom">
+        <div className="copyrightSection">
+          <span className="copyrightText">
+            2025 Digiflex. All rights reserved
+          </span>
+          <div className="legalLinks">
+            <Link to="/privacy-policy" className="legalLink">
+              Privacy Policy
+            </Link>
+            <Link to="/terms-of-service" className="legalLink">
+              Terms of Service
+            </Link>
+          </div>
+        </div>
+
+        <div className="socialIcons">
+          {socialLinks.map((social, index) => (
+            <SocialIcon
+              key={index}
+              url={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="socialIcon"
+              style={{ width: 24, height: 24 }}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  </footer>
+);
+
+export default FooterContent;
+</file>
+
+<file path="src/components/HeroComponent.css">
+/* HeroComponent.css */
+
+/* Hero Container */
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Video Background */
+  .video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Overlay */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
+  }
+  
+  /* Hero Content */
+  .hero-content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 20px;
+    text-align: center;
+    color: white;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  .hero-title .highlight {
+    color: #e67e22;/* Gold color */
+  }
+  
+  .hero-subtitle {
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Buttons */
+  .hero-buttons {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .primary-button {
+    background-color: #e67e22; /* Gold */
+    color: white;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .primary-button:hover {
+    background-color: #c06413; /* Darker gold */
+  }
+  
+  .secondary-button {
+    background-color: white;
+    color: #e67e22; /* Dark goldenrod */
+    font-weight: bold;
+    padding: 12px 24px;
+    border: 2px solid #e67e22; /* Gold border */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .secondary-button:hover {
+    background-color: #f5f5f5;
+  }
+  
+  /* Responsive Styles */
+  @media (min-width: 768px) {
+    .hero-title {
+      font-size: 3.5rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.5rem;
+    }
+    
+    .hero-buttons {
+      flex-direction: row;
+      gap: 16px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .hero-title {
+      font-size: 4rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.75rem;
+    }
+  }
+</file>
+
+<file path="src/components/HeroComponent.js">
+import { useState, useEffect } from 'react';
+import './HeroComponent.css'; // We'll create this CSS file separately
+import ujjainVideo from "../images/vid1.mov"; 
+
+export default function HeroComponent() {
+  const [isMobile, setIsMobile] = useState(false);
+  
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    // Check on initial load
+    checkScreenSize();
+    
+    // Add event listener for window resize
+    window.addEventListener('resize', checkScreenSize);
+    
+    // Cleanup
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
+
+  return (
+    <div className="hero-container">
+      {/* Background Video */}
+      <div className="video-background">
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          playsInline
+        >
+         
+          <source src={ujjainVideo} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        
+        {/* Overlay with gradient */}
+        <div className="overlay"></div>
+      </div>
+      
+      {/* Content */}
+      <div className="hero-content">
+        <h1 className="hero-title">
+          <span className="highlight">Ujjain</span> - The City of Temples
+        </h1>
+        <p className="hero-subtitle">
+          Discover the spiritual heritage and ancient culture of one of India's holiest cities
+        </p>
+        <div className="hero-buttons">
+          <button className="primary-button">
+            Explore Ujjain
+          </button>
+          <button className="secondary-button">
+            Plan Your Visit
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+</file>
+
+<file path="src/components/HeroSection.css">
+.hero-section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  color: #fff;
+}
+
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+  
+}
+
+.hero-slide.active {
+  opacity: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.hero-main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 2rem;
+}
+
+.hero-main-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.hero-main-content .quote {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-main-content .info {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  animation: fadeInUp 1.4s ease-out;
+}
+
+.primary-btn, .secondary-btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.primary-btn {
+  background: #ff6b18;
+  color: white;
+  border: none;
+  box-shadow: 0 4px 8px rgba(255, 107, 24, 0.3);
+}
+
+.primary-btn:hover {
+  background: #e05a0e;
+  transform: translateY(-2px);
+}
+
+.secondary-btn {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.secondary-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.hero-side-content {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.info-card {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  padding: 1.5rem;
+  animation: fadeInRight 1s ease-out;
+  border-left: 4px solid #ff6b18;
+  color: black;
+}
+
+.info-card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  color: #ff6b18;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.info-item:last-child {
+  margin-bottom: 0;
+}
+
+.event-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.event-item h4 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1rem;
+}
+
+.event-item span {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.slider-controls {
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  z-index: 10;
+}
+
+.slide-arrow {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+}
+
+.slide-arrow:hover {
+  background: rgba(255, 107, 24, 0.8);
+  transform: scale(1.1);
+}
+
+.slider-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background-color: #ff6b18;
+  transform: scale(1.2);
+}
+
+.floating-highlights {
+  position: absolute;
+  bottom: 6rem;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  z-index: 10;
+}
+
+.highlight-item {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  animation: fadeInUp 1.6s ease-out;
+}
+
+.highlight-icon {
+  font-size: 1.5rem;
+}
+
+.highlight-text {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+      opacity: 0;
+      transform: translateX(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .hero-content {
+      flex-direction: column;
+      padding: 1.5rem;
+  }
+  
+  .hero-main-content {
+      padding-right: 0;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 2rem;
+  }
+  
+  .hero-side-content {
+      width: 100%;
+      flex-direction: row;
+      margin-top: auto;
+      margin-bottom: 8rem;
+  }
+  
+  .info-card {
+      flex: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-main-content h1 {
+      font-size: 2.5rem;
+  }
+  
+  .hero-main-content .quote {
+      font-size: 1.2rem;
+  }
+  
+  .hero-main-content .info {
+      font-size: 1rem;
+  }
+  
+  .hero-side-content {
+      flex-direction: column;
+      gap: 1rem;
+  }
+  
+  .floating-highlights {
+      flex-wrap: wrap;
+      bottom: 8rem;
+      gap: 1rem;
+      padding: 0 1rem;
+  }
+  
+  .highlight-item {
+      padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-main-content h1 {
+      font-size: 2rem;
+  }
+  
+  .action-buttons {
+      flex-direction: column;
+      width: 100%;
+      max-width: 300px;
+  }
+  
+  .slider-controls {
+      gap: 1rem;
+  }
+  
+  .floating-highlights {
+      display: none;
+  }
+}
+</file>
+
+<file path="src/components/HeroSection.js">
+import React, { useState, useEffect } from "react";
+import "./HeroSection.css";
+import img1 from "../images/bg1.png";
+import img2 from "../images/bg2.png";
+import img3 from "../images/bg3.png";
+import { ArrowLeft, ArrowRight, Calendar, Clock, MapPin } from "lucide-react";
+
+const HeroSection = () => {
+  const slides = [
+    {
+      image: img1,
+      title: "Ujjain Mahakaleswar",
+      quote: "The abode of Shiva, where even time bows down",
+      info: "One of the twelve Jyotirlingas and an ancient center of spiritual knowledge",
+    },
+    {
+      image: img2,
+      title: "Darshan of Mahakal",
+      quote: "Gateway to salvation, the ocean of devotion",
+      info: "Experience the divine Bhasma Aarti and seek blessings of Lord Shiva",
+    },
+    {
+      image: img3,
+      title: "Sacred City of Ujjain",
+      quote: "Where faith and spirituality converge",
+      info: "Visit Kumbh Mela, where millions gather for spiritual cleansing",
+    },
+  ];
+
+  const [currSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [slides.length]);
+
+  const goToSlide = (index) => {
+    setCurrentSlide(index);
+  };
+
+  const nextSlide = () => {
+    setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide(
+      (prevSlide) => (prevSlide - 1 + slides.length) % slides.length
+    );
+  };
+
+  return (
+    <div className="hero-section">
+      {slides.map((slide, index) => (
+        <div
+          key={index}
+          className={`hero-slide ${index === currSlide ? "active" : ""}`}
+          style={{ backgroundImage: `url(${slide.image})` }}
+        >
+          <div className="overlay"></div>
+        </div>
+      ))}
+
+      <div className="hero-content">
+        <div className="hero-main-content">
+          <h1>{slides[currSlide].title}</h1>
+          <p className="quote">{slides[currSlide].quote}</p>
+          <p className="info">{slides[currSlide].info}</p>
+
+          <div className="action-buttons">
+            <button className="primary-btn">Book Darshan</button>
+            <button className="secondary-btn">Virtual Tour</button>
+          </div>
+        </div>
+
+        <div className="hero-side-content">
+          <div className="info-card">
+            <h3>Temple Timings</h3>
+            <div className="info-item">
+              <Clock size={18} />
+              <span>Bhasma Aarti: 4:00 AM - 5:30 AM</span>
+            </div>
+            <div className="info-item">
+              <Clock size={18} />
+              <span>Regular Darshan: 6:00 AM - 10:00 PM</span>
+            </div>
+            <div className="info-item">
+              <MapPin size={18} />
+              <span>Ujjain, Madhya Pradesh</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="slider-controls">
+        <button className="slide-arrow prev" onClick={prevSlide}>
+          <ArrowLeft size={24} />
+        </button>
+
+        <div className="slider-dots">
+          {slides.map((_, index) => (
+            <span
+              key={index}
+              className={`dot ${index === currSlide ? "active" : ""}`}
+              onClick={() => goToSlide(index)}
+            ></span>
+          ))}
+        </div>
+
+        <button className="slide-arrow next" onClick={nextSlide}>
+          <ArrowRight size={24} />
+        </button>
+      </div>
+
+      <div className="floating-highlights">
+        <div className="highlight-item">
+          <div className="highlight-icon">🕉️</div>
+          <div className="highlight-text">12 Jyotirlinga</div>
+        </div>
+        <div className="highlight-item">
+          <div className="highlight-icon">🏺</div>
+          <div className="highlight-text">Kumbh Mela</div>
+        </div>
+        <div className="highlight-item">
+          <div className="highlight-icon">🔱</div>
+          <div className="highlight-text">Bhasma Aarti</div>
+        </div>
+        <div className="highlight-item">
+          <div className="highlight-icon">🚁</div>
+          <div className="highlight-text">Helicopter Tours</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default HeroSection;
+</file>
+
+<file path="src/components/HotelCard.css">
+/* Hotel Section Container Styles */
+.hotel-section {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  .section-title {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+  }
+  
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+  }
+  
+  .hotel-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 0 15px;
+    width: 100%;
+  }
+  
+  /* Hotel Card Styles */
+  .hotel-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e67e00;
+  }
+  
+  .hotel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px #e67e00;
+  }
+  
+  .hotel-image {
+    height: 180px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .hotel-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.2), transparent);
+    pointer-events: none;
+  }
+  
+  .hotel-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .hotel-card:hover .hotel-image img {
+    transform: scale(1.05);
+  }
+  
+  .hotel-info {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-grow: 1;
+  }
+  
+  .hotel-name {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .hotel-rating {
+    display: flex;
+    align-items: center;
+  }
+  
+  .star {
+    color: #D4AF37; /* Gold color */
+    font-size: 16px;
+    margin-right: 2px;
+  }
+  
+  .half-star {
+    position: relative;
+    opacity: 0.6;
+  }
+  
+  .empty-star {
+    color: #D4AF37;
+    opacity: 0.3;
+  }
+  
+  .rating-number {
+    margin-left: 5px;
+    color: #666;
+    font-size: 14px;
+  }
+  
+  .hotel-location {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .location-icon {
+    margin-right: 5px;
+    color: #e67e00;
+  }
+  
+  .hotel-price-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px solid rgba(223, 115, 14, 0.753);
+  }
+  
+  .hotel-price {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .price-amount {
+    font-weight: 600;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .price-per-night {
+    font-size: 12px;
+    color: #888;
+  }
+  
+  .book-now-btn {
+    background: #e67e00;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(206, 120, 9, 0.3);
+  }
+  
+  .book-now-btn:hover {
+    background: #e67e00;
+    box-shadow: 0 4px 8px rgba(158, 88, 8, 0.897);
+    transform: translateY(-2px);
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 1200px) {
+    .hotel-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media screen and (max-width: 992px) {
+    .hotel-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .section-title {
+      font-size: 24px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .hotel-container {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+    
+    .hotel-image {
+      height: 160px;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .hotel-container {
+      grid-template-columns: 1fr;
+      padding: 0;
+    }
+    
+    .hotel-card {
+      max-width: 100%;
+    }
+    
+    .hotel-name {
+      font-size: 16px;
+    }
+    
+    .hotel-price-container {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    
+    .book-now-btn {
+      width: 100%;
+      padding: 10px;
+      text-align: center;
+    }
+    
+    .section-title {
+      font-size: 20px;
+    }
+    
+    .hotel-section {
+      padding: 30px 15px;
+    }
+  }
+  
+  @media screen and (max-width: 320px) {
+    .hotel-image {
+      height: 140px;
+    }
+  }
+</file>
+
+<file path="src/components/HotelCard.js">
+import React from "react";
+import "./HotelCard.css";
+import hotel1 from "../images/hotel1.jpg";
+import hotel2 from "../images/hotel2.avif";
+import hotel3 from "../images/hotel3.jpeg";
+import hotel4 from "../images/hotel4.jpeg";
+
+// Hotel data
+const hotels = [
+    {
+        id: 1,
+        name: "Shri Mahakal Residency",
+        image: hotel1, // Replace with your actual image path
+        rating: 4.7,
+        location: "Near Mahakaleshwar Temple, Ujjain",
+        price: 3500,
+    },
+
+    {
+        id: 2,
+        name: "Divine Ujjain Resort",
+        image: hotel2, // Replace with your actual image path
+        rating: 4.3,
+        location: "Ram Ghat Road, Ujjain",
+        price: 2800,
+    },
+    {
+        id: 3,
+        name: "Hotel Rudraksh Palace",
+        image: hotel3, // Replace with your actual image path
+        rating: 4.5,
+        location: "Hari Phatak, Ujjain",
+        price: 3200,
+    },
+    {
+        id: 4,
+        name: " Hotel Ashok Palace",
+        image: hotel4, // Replace with your actual image path
+        rating: 4.3,
+        location: "Near Mahakal Temple, Ujjain",
+        price: 3000,
+    },
+];
+
+// Individual Hotel Card Component
+const HotelCard = ({ hotel }) => {
+    const { name, image, rating, location, price } = hotel;
+
+    // Function to display stars for ratings
+    const renderStars = (rating) => {
+        const stars = [];
+        const fullStars = Math.floor(rating);
+        const hasHalfStar = rating % 1 !== 0;
+
+        for (let i = 0; i < fullStars; i++) {
+            stars.push(
+                <span key={`star-${i}`} className="star full-star">
+                    ★
+                </span>
+            );
+        }
+
+        if (hasHalfStar) {
+            stars.push(
+                <span key="half-star" className="star half-star">
+                    ★
+                </span>
+            );
+        }
+
+        const emptyStars = 5 - stars.length;
+        for (let i = 0; i < emptyStars; i++) {
+            stars.push(
+                <span key={`empty-star-${i}`} className="star empty-star">
+                    ☆
+                </span>
+            );
+        }
+
+        return stars;
+    };
+
+    return (
+        <div className="hotel-card">
+            <div className="hotel-image">
+                <img src={image} alt={name} />
+            </div>
+            <div className="hotel-info">
+                <h3 className="hotel-name">{name}</h3>
+                <div className="hotel-rating">
+                    {renderStars(rating)}
+                    <span className="rating-number">({rating})</span>
+                </div>
+                <div className="hotel-location">
+                    <span className="location-icon">📍</span>
+                    <span>{location}</span>
+                </div>
+                <div className="hotel-price-container">
+                    <div className="hotel-price">
+                        <span className="price-amount">₹{price}</span>
+                        <span className="price-per-night">per night</span>
+                    </div>
+                    <button className="book-now-btn">Book Now</button>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+// Container component that renders multiple hotel cards
+const HotelCardContainer = () => {
+    return (
+        <div className="hotel-section">
+            <h2 className="section-title">Recommended Stays in Ujjain</h2>
+            <div className="hotel-container">
+                {
+                    hotels.map((hotel) => (
+                        <HotelCard key={hotel.id} hotel={hotel} />
+                    ))
+                }
+            </div>
+        </div>
+    );
+};
+
+export default HotelCardContainer;
+</file>
+
+<file path="src/components/Mahakaleshwar/ArchitectureMahakal.js">
+// TempleArchitecturePage.js
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { guideCards } from "../Data";
+
+const TempleArchitecturePage = () => {
+  const navigate = useNavigate();
+  const selectedCard = guideCards.find((card) => card.slug === "architecture");
+
+  const handleBackClick = () => {
+    navigate("/");
+  };
+
+  return (
+    <div className="container">
+      <button
+        className="btn"
+        onClick={handleBackClick}
+        style={{ marginBottom: "20px" }}
+      >
+        &larr; Back to Guide
+      </button>
+
+      <div className="section-title">
+        <h2>{selectedCard.title}</h2>
+      </div>
+
+      <div className="two-column">
+        <div className="content-text">
+          <p>{selectedCard.content}</p>
+
+          <h3>Historical Background</h3>
+          <p>
+            The Mahakaleshwar temple is believed to have been originally
+            constructed by King Chandrasena and later renovated by several
+            rulers over centuries, especially during the Maratha period. The
+            temple holds immense historical and spiritual value as one of the 12
+            sacred Jyotirlingas in India.
+          </p>
+
+          <h3>Design & Layout</h3>
+          <p>
+            The temple follows a multi-level structure with the sanctum located
+            underground, an upper section for regular worship, and a Sabha
+            Mandap (assembly hall) adorned with finely carved pillars. The
+            central spire (Shikhara) rises elegantly above the sanctum,
+            capturing the essence of ancient Indian temple architecture.
+          </p>
+
+          <h3>Symbolism & Craftsmanship</h3>
+          <p>
+            Each element of the temple's design reflects spiritual symbolism.
+            The motifs, sculptures of deities, and carvings of mythological
+            tales not only showcase the artistic excellence of the era but also
+            convey religious and cultural messages. The temple has been crafted
+            using black stone, which adds to its timeless elegance.
+          </p>
+
+          <h3>Modern Restoration Efforts</h3>
+          <p>
+            In recent years, conservation efforts have been initiated to
+            preserve the temple's structure and surroundings. These include
+            stone polishing, wall stabilization, and improved drainage systems
+            to protect the ancient foundation from water damage.
+          </p>
+
+          <h3>Interesting Facts</h3>
+          <ul>
+            <li>
+              The temple is south-facing, which is rare and symbolically
+              powerful in Shaivism.
+            </li>
+            <li>
+              The Jyotirlinga is Swayambhu — self-manifested, not installed by
+              humans.
+            </li>
+            <li>
+              The temple has multiple shrines dedicated to various deities
+              within the same complex.
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <img
+            src={selectedCard.image}
+            alt={selectedCard.title}
+            className="img-responsive"
+          />
+          <div className="info-box">
+            <h4>Quick Facts</h4>
+            <ul>
+              <li>
+                <strong>Architectural Style:</strong> Bhumija and Maratha
+              </li>
+              <li>
+                <strong>Sanctum:</strong> Underground Garbhagriha
+              </li>
+              <li>
+                <strong>Main Materials:</strong> Black Stone, Sandstone
+              </li>
+              <li>
+                <strong>Special Feature:</strong> South-facing Lingam
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default TempleArchitecturePage;
+</file>
+
+<file path="src/components/Mahakaleshwar/BhasmaAartiPage.js">
+// BhasmaAartiPage.js - Bhasma Aarti page component
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { guideCards } from "../Data";
+
+const BhasmaAartiPage = () => {
+  const navigate = useNavigate();
+
+  // Find the Bhasma Aarti card data
+  const selectedCard = guideCards.find((card) => card.slug === "bhasma-aarti");
+
+  const handleBackClick = () => {
+    navigate("/");
+  };
+
+  return (
+    <div className="container">
+      <button
+        className="btn"
+        onClick={handleBackClick}
+        style={{ marginBottom: "20px" }}
+      >
+        &larr; Back to Guide
+      </button>
+      <div className="section-title">
+        <h2>{selectedCard.title}</h2>
+      </div>
+      <div className="two-column">
+        <div className="content-text">
+          <p>{selectedCard.content}</p>
+
+          <h3>Significance of Bhasma Aarti</h3>
+          <p>
+            The use of bhasma (cremation ash) symbolizes the ultimate reality of
+            physical existence. Lord Shiva is often depicted smeared with
+            bhasma, representing his authority over death and time. During this
+            aarti, the Shivalinga is decorated with various offerings including
+            ash, sandalwood paste, flowers, and milk, while priests chant Vedic
+            hymns.
+          </p>
+
+          <h3>Timing and Procedure</h3>
+          <p>
+            The Bhasma Aarti begins at 4:00 AM and lasts for approximately one
+            hour. Devotees are advised to arrive by 3:00 AM to secure a place.
+            The ritual begins with the awakening of Lord Shiva, followed by an
+            elaborate bathing ceremony using milk, curd, honey, sugar, and
+            water. The lingam is then adorned with bhasma while sacred mantras
+            are chanted.
+          </p>
+
+          <h3>How to Attend</h3>
+          <p>
+            To attend the Bhasma Aarti, visitors need to purchase special
+            tickets, which are available at the temple office or online. It's
+            advisable to book these tickets in advance, especially during peak
+            seasons and festivals. Photography is strictly prohibited during the
+            ceremony.
+          </p>
+
+          <h3>What to Expect</h3>
+          <p>
+            The Bhasma Aarti is an intense spiritual experience. The temple is
+            filled with the sounds of bells, drums, and Sanskrit chants. The air
+            is heavy with incense, and the atmosphere is charged with devotion.
+            The ritual concludes with the distribution of prasad to devotees.
+          </p>
+        </div>
+        <div>
+          <img
+            src={selectedCard.image}
+            alt={selectedCard.title}
+            className="img-responsive"
+          />
+          <div className="info-box">
+            <h4>Bhasma Aarti Quick Guide</h4>
+            <ul>
+              <li>
+                <strong>Timing:</strong> 4:00 AM daily
+              </li>
+              <li>
+                <strong>Duration:</strong> Approximately 1 hour
+              </li>
+              <li>
+                <strong>Tickets:</strong> Special tickets required
+              </li>
+              <li>
+                <strong>Dress Code:</strong> Traditional attire preferred
+              </li>
+              <li>
+                <strong>Arrival:</strong> 1 hour before for good spot
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default BhasmaAartiPage;
+</file>
+
+<file path="src/components/Mahakaleshwar/ContactForm.css">
+.container {
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .two-column {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  /* .contact-info,
+  .contact-form {
+    flex: 1 1 45%;
+  }
+   */
+  .info-item {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .info-item i {
+    margin-right: 15px;
+    font-size: 24px;
+    color: #444;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .btn {
+    background-color: #4a148c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+</file>
+
+<file path="src/components/Mahakaleshwar/ContactForm.js">
+import React from "react";
+import "./ContactForm.css";
+
+const ContactPage = () => {
+  return (
+    <section className="container">
+      <div className="section-title">
+        <h2>Contact Us</h2>
+        <p>
+          Get in touch for customized travel plans and temple visit assistance.
+        </p>
+      </div>
+
+      <div className="two-column">
+        {/* Contact Info */}
+        <div className="contact-info">
+          <div className="info-item">
+            <i className="fas fa-map-marker-alt"></i>
+            <div>
+              <h4>Address</h4>
+              <p>Mahakaleshwar Temple Road, Ujjain, Madhya Pradesh 456006</p>
+            </div>
+          </div>
+          <div className="info-item">
+            <i className="fas fa-phone"></i>
+            <div>
+              <h4>Phone</h4>
+              <p>+91 1234567890</p>
+            </div>
+          </div>
+          <div className="info-item">
+            <i className="fas fa-envelope"></i>
+            <div>
+              <h4>Email</h4>
+              <p>info@mahakaleshwartemple.com</p>
+            </div>
+          </div>
+
+          {/* Google Map */}
+          <div className="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.498157883766!2d75.76646307532979!3d23.182887979088906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3963746c6687e8a5%3A0xf834069f6fea0209!2sMahakaleshwar%20Jyotirlinga!5e0!3m2!1sen!2sin!4v1681215421437!5m2!1sen!2sin"
+              width="100%"
+              height="300"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Mahakaleshwar Temple Map"
+            ></iframe>
+          </div>
+        </div>
+
+        {/* Contact Form */}
+        <div className="contact-form">
+          <form>
+            <div className="form-group">
+              <label htmlFor="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                className="form-control"
+                placeholder="Your Name"
+                required
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                className="form-control"
+                placeholder="Your Email"
+                required
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="phone">Phone</label>
+              <input
+                type="tel"
+                id="phone"
+                className="form-control"
+                placeholder="Your Phone Number"
+                required
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="subject">Subject</label>
+              <input
+                type="text"
+                id="subject"
+                className="form-control"
+                placeholder="Subject"
+                required
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="message">Message</label>
+              <textarea
+                id="message"
+                className="form-control"
+                placeholder="Your Message"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" className="btn">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ContactPage;
+</file>
+
+<file path="src/components/Mahakaleshwar/FestivalMahakal.js">
+// FestivalPage.js - Festival info page component
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { guideCards } from "../Data";
+
+const FestivalPage = () => {
+  const navigate = useNavigate();
+
+  // Find the Festival card data
+  const selectedCard = guideCards.find((card) => card.slug === "festivals");
+
+  const handleBackClick = () => {
+    navigate("/"); // Go back to the Guide page
+  };
+
+  return (
+    <div className="container">
+      <button
+        className="btn"
+        onClick={handleBackClick}
+        style={{ marginBottom: "20px" }}
+      >
+        &larr; Back to Guide
+      </button>
+
+      <div className="section-title">
+        <h2>{selectedCard.title}</h2>
+      </div>
+
+      <div className="two-column">
+        <div className="content-text">
+          <p>{selectedCard.content}</p>
+
+          <h3>Major Festivals</h3>
+          <p>
+            The Mahakaleshwar Temple is known for its grand celebrations of
+            various Hindu festivals. Major festivals like Maha Shivratri,
+            Navratri, and Shravan Month draw thousands of devotees each year.
+          </p>
+
+          <h3>Maha Shivratri</h3>
+          <p>
+            Maha Shivratri is one of the most important festivals celebrated at
+            the temple. During this festival, devotees gather for night-long
+            prayers and offer special rituals to Lord Shiva. The temple is
+            adorned with flowers, lights, and grand decorations during this
+            festival.
+          </p>
+
+          <h3>Navratri</h3>
+          <p>
+            Navratri, the festival dedicated to the worship of Goddess Durga, is
+            celebrated with much enthusiasm at the Mahakaleshwar Temple. The
+            temple holds special pujas and aartis during these nine nights, and
+            devotees participate in various cultural programs and processions.
+          </p>
+
+          <h3>Shravan Month</h3>
+          <p>
+            The Shravan Month, considered sacred for Lord Shiva devotees, sees a
+            massive influx of pilgrims. During this time, devotees offer water
+            and milk to the Jyotirlinga as part of their spiritual rituals.
+          </p>
+        </div>
+
+        <div>
+          <img
+            src={selectedCard.image}
+            alt={selectedCard.title}
+            className="img-responsive"
+          />
+          <div className="info-box">
+            <h4>Festival Quick Info</h4>
+            <ul>
+              <li>
+                <strong>Major Festivals:</strong> Maha Shivratri, Navratri,
+                Shravan Month
+              </li>
+              <li>
+                <strong>Festival Highlights:</strong> Special Aartis,
+                Processions, Cultural Events
+              </li>
+              <li>
+                <strong>Peak Festival Time:</strong> Maha Shivratri, Shravan
+                Month
+              </li>
+              <li>
+                <strong>Festival Atmosphere:</strong> Devotional, Colorful,
+                Cultural
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default FestivalPage;
+</file>
+
+<file path="src/components/Mahakaleshwar/HistoryMahakal.js">
+// HistoryPage.js - History info page component
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { guideCards } from "../Data";
+
+const HistoryPage = () => {
+  const navigate = useNavigate();
+
+  // Find the History card data
+  const selectedCard = guideCards.find((card) => card.slug === "history");
+
+  const handleBackClick = () => {
+    navigate("/"); // Go back to the Guide page
+  };
+
+  return (
+    <div className="container">
+      <button
+        className="btn"
+        onClick={handleBackClick}
+        style={{ marginBottom: "20px" }}
+      >
+        &larr; Back to Guide
+      </button>
+
+      <div className="section-title">
+        <h2>{selectedCard.title}</h2>
+      </div>
+
+      <div className="two-column">
+        <div className="content-text">
+          <p>{selectedCard.content}</p>
+
+          <h3>Historical Significance</h3>
+          <p>
+            The history of the Mahakaleshwar Temple dates back to ancient times.
+            The temple is considered one of the holiest pilgrimage sites for
+            followers of Lord Shiva. Its existence is mentioned in various
+            ancient scriptures and texts, and it has been a key religious
+            landmark for centuries.
+          </p>
+
+          <h3>Legends and Myths</h3>
+          <p>
+            Several legends surround the Mahakaleshwar Temple. One of the most
+            popular myths states that the temple was built by the gods
+            themselves. Another myth suggests that it was established by Lord
+            Shiva’s devotee, King Chandrasena, after receiving divine blessings.
+          </p>
+
+          <h3>Historical Architecture</h3>
+          <p>
+            The temple’s architecture reflects the splendor of ancient times,
+            with a mix of traditional Hindu temple designs and intricate
+            carvings that tell the story of the temple’s rich past. The
+            architectural style has evolved over centuries, incorporating
+            elements from various dynasties.
+          </p>
+        </div>
+
+        <div>
+          <img
+            src={selectedCard.image}
+            alt={selectedCard.title}
+            className="img-responsive"
+          />
+          <div className="info-box">
+            <h4>History Quick Info</h4>
+            <ul>
+              <li>
+                <strong>Location:</strong> Ujjain, Madhya Pradesh
+              </li>
+              <li>
+                <strong>First Mentioned:</strong> Ancient scriptures
+              </li>
+              <li>
+                <strong>Key Figures:</strong> King Chandrasena, Lord Shiva
+              </li>
+              <li>
+                <strong>Historical Importance:</strong> One of the 12
+                Jyotirlingas
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default HistoryPage;
+</file>
+
+<file path="src/components/Mahakaleshwar/HomePage.js">
+// HomePage.js - Homepage component
+import React from "react";
+import { Link } from "react-router-dom";
+import { guideCards, hotels, packages } from "../Data";
+
+const HomePage = () => {
+  return (
+    <>
+      {/* Hero Section */}
+      <section className="hero">
+        <h1>Mahakaleshwar Temple, Ujjain</h1>
+        <p>
+          Experience divine spirituality at one of the twelve Jyotirlingas of
+          Lord Shiva
+        </p>
+        <a href="#guide" className="btn">
+          Explore Now
+        </a>
+      </section>
+
+      {/* Mahakaleshwar Guide Section */}
+      <section id="guide" className="container">
+        <div className="section-title">
+          <h2>Mahakaleshwar Guide</h2>
+          <p>
+            Everything you need to know about visiting the sacred Mahakaleshwar
+            Temple
+          </p>
+        </div>
+
+        <div className="card-container">
+          {guideCards.map((card) => (
+            <div className="card" key={card.id}>
+              <div className="card-img">
+                <img src={card.image} alt={card.title} />
+              </div>
+              <div className="card-content">
+                <h3>{card.title}</h3>
+                <p>{card.description}</p>
+                <Link to={`/mahakaleshwar/${card.slug}`} className="btn">
+                  Read More
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Hotels Section */}
+      <section className="container">
+        <div className="section-title">
+          <h2>Mahakaleshwar Hotels</h2>
+          <p>
+            Comfortable stays near the temple for a peaceful pilgrimage
+            experience
+          </p>
+        </div>
+
+        <div className="card-container">
+          {hotels.map((hotel) => (
+            <div className="card" key={hotel.id}>
+              <div className="card-img">
+                <img src={hotel.image} alt={hotel.name} />
+              </div>
+              <div className="content">
+                <h3>{hotel.name}</h3>
+                <div className="detail-item">
+                  <span className="label">Price Range:</span>
+                  <span>{hotel.price}</span>
+                </div>
+                <div className="detail-item">
+                  <span className="label">Distance:</span>
+                  <span>{hotel.distance}</span>
+                </div>
+                <div className="detail-item">
+                  <span className="label">Rating:</span>
+                  <span>{hotel.rating}/5</span>
+                </div>
+                <button className="btn">Book Now</button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Tour Packages Section */}
+      <section className="container">
+        <div className="section-title">
+          <h2>Mahakaleshwar Tour Packages</h2>
+          <p>Curated spiritual journeys for a complete Ujjain experience</p>
+        </div>
+
+        <div className="card-container">
+          {packages.map((pkg) => (
+            <div className="card" key={pkg.id}>
+              <div className="card-img">
+                <img src={pkg.image} alt={pkg.name} />
+              </div>
+              <div className="card-content">
+                <h3>{pkg.name}</h3>
+                <div className="detail-item">
+                  <span className="label">Duration:</span>
+                  <span>{pkg.duration}</span>
+                </div>
+                <div className="detail-item">
+                  <span className="label">Price:</span>
+                  <span>{pkg.price}</span>
+                </div>
+                <div className="detail-item">
+                  <span className="label">Includes:</span>
+                  <span>{pkg.includes}</span>
+                </div>
+                <button className="btn">Book Package</button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    </>
+  );
+};
+
+export default HomePage;
+</file>
+
+<file path="src/components/Mahakaleshwar/HowToReachMahakal.js">
+// HowToReachMahakalPage.js
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { guideCards } from "../Data";
+
+const HowToReachMahakalPage = () => {
+  const navigate = useNavigate();
+  const selectedCard = guideCards.find((card) => card.slug === "how-to-reach");
+
+  const handleBackClick = () => {
+    navigate("/");
+  };
+
+  return (
+    <div className="container">
+      <button
+        className="btn"
+        onClick={handleBackClick}
+        style={{ marginBottom: "20px" }}
+      >
+        &larr; Back to Guide
+      </button>
+
+      <div className="section-title">
+        <h2>{selectedCard.title}</h2>
+      </div>
+
+      <div className="two-column">
+        <div className="content-text">
+          <p>{selectedCard.content}</p>
+
+          <h3>Reaching by Road</h3>
+          <p>
+            Ujjain is well-connected by a wide network of highways. You can
+            drive from Indore (55 km), Bhopal (190 km), or even Ahmedabad. Both
+            state-run and private buses operate at regular intervals. AC sleeper
+            and semi-sleeper buses are available for comfort.
+          </p>
+
+          <h3>Reaching by Rail</h3>
+          <p>
+            Ujjain Junction is a key railway hub. It is connected to major
+            Indian cities including Delhi, Mumbai, Pune, Bhopal, and Varanasi.
+            The temple is just a 5–10 minute drive from the railway station.
+            Auto-rickshaws, cabs, and e-rickshaws are easily available outside.
+          </p>
+
+          <h3>Reaching by Air</h3>
+          <p>
+            The nearest airport is Devi Ahilyabai Holkar Airport in Indore. It
+            has daily flights from Delhi, Mumbai, Bangalore, and other cities.
+            From the airport, you can take a prepaid cab, private taxi, or
+            government bus to reach Ujjain.
+          </p>
+
+          <h3>Local Travel Options</h3>
+          <p>
+            Inside Ujjain, commuting is easy with the availability of
+            auto-rickshaws, shared cabs, and e-bikes. For elderly visitors,
+            battery-operated temple transport is also available near the
+            entrance gate.
+          </p>
+
+          <h3>Tips for Devotees</h3>
+          <ul>
+            <li>
+              Plan to reach Ujjain a day before your Darshan for a relaxed
+              visit.
+            </li>
+            <li>
+              During festivals like Mahashivratri or Sawan Mondays, pre-book
+              travel and stay.
+            </li>
+            <li>
+              If traveling in a group, consider hiring a local guide or cab for
+              the day.
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <img
+            src={selectedCard.image}
+            alt={selectedCard.title}
+            className="img-responsive"
+          />
+          <div className="info-box">
+            <h4>Connectivity Summary</h4>
+            <ul>
+              <li>
+                <strong>By Train:</strong> Ujjain Junction (2 km away)
+              </li>
+              <li>
+                <strong>By Air:</strong> Indore Airport (55 km)
+              </li>
+              <li>
+                <strong>By Road:</strong> Well-connected from MP & nearby states
+              </li>
+              <li>
+                <strong>Local:</strong> Autos, cabs, buses, battery carts
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default HowToReachMahakalPage;
+</file>
+
+<file path="src/components/Mahakaleshwar/MahakaleshwarContent.css">
+/* MahakaleshwarContent.css */
+:root {
+    --primary-color: #d96704;
+    --text-dark: #333;
+    --text-light: #666;
+    --white: #fff;
+    --light-gray: #f5f5f5;
+    --border-color: #ddd;
+    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Main Content Styles */
+  .main-content {
+    flex: 1;
+    min-height: calc(100vh - 140px); /* Account for header and footer */
+  }
+  
+  /* Common Styles */
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  .section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  
+  .section-title h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+  }
+  
+  .section-title::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+  }
+  
+  .btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .btn:hover {
+    background-color: #b85603;
+    transform: translateY(-2px);
+  }
+  
+  .img-responsive {
+    width: 100%;
+    height: 600px;
+    max-width: 600px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+  }
+  
+  
+  .two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    /* align-items: center; */
+    align-items: start; 
+  }
+
+  .info-box {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-left: 4px solid #007BFF; /* Optional accent */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin-top: 20px;
+  }
+  
+  .info-box h4 {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 1.2rem;
+  }
+  
+  .info-box ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .info-box li {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+  }
+  
+  .info-box strong {
+    display: inline-block;
+    width: 150px;
+    color: #444;
+  }
+  
+  
+  /* Hero Section */
+  .hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../images/bg1.png');
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin-bottom: 25px;
+  }
+  
+  /* Card Styles */
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+  }
+  
+  .card {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .card-img {
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .card:hover .card-img img {
+    transform: scale(1.1);
+  }
+  
+  .card-content {
+    padding: 20px;
+  }
+  
+  .card-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+  }
+  
+  .card-content p {
+    color: var(--text-light);
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
+  
+  .feature-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: all 0.3s ease;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Content Text */
+  .content-text p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: var(--text-light);
+  }
+  
+  /* About Section Specific */
+  .additional-info {
+    margin-top: 50px;
+  }
+  
+  .additional-info h3 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  .info-item {
+    background-color: var(--light-gray);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .info-item h4 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+  }
+  
+  /* Package and Hotel Details */
+  .package-details,
+  .hotel-details {
+    background-color: var(--light-gray);
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .detail-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .detail-item:last-child {
+    border-bottom: none;
+  }
+  
+  .label {
+    font-weight: bold;
+  }
+  
+  /* Bhasma Aarti Specific */
+  .bhasma-aarti-section {
+    background-color: var(--light-gray);
+    padding: 40px 0;
+  }
+  
+  .aarti-schedule {
+    background-color: var(--white);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .aarti-schedule h4 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+  }
+  
+  .schedule-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .schedule-time {
+    font-weight: bold;
+  }
+  
+  /* Bhasma Aarti Dos and Don'ts */
+  .aarti-dos-donts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 30px;
+  }
+  
+  .dos, .donts {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .dos h4, .donts h4 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  
+  .dos ul, .donts ul {
+    padding-left: 20px;
+  }
+  
+  .dos li, .donts li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+  
+  /* History Section */
+  .history-content {
+    margin-top: 30px;
+  }
+  
+  .history-timeline {
+    position: relative;
+    margin: 0 auto 60px;
+    padding: 20px 0;
+  }
+  
+  .history-timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: var(--primary-color);
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+  }
+  
+  .timeline-marker {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    box-shadow: 0 0 0 4px var(--white), 0 0 0 8px rgba(217, 103, 4, 0.2);
+  }
+  
+  .timeline-content {
+    position: relative;
+    width: 45%;
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .timeline-item:nth-child(odd) .timeline-content {
+    left: 55%;
+  }
+  
+  .timeline-item:nth-child(even) .timeline-content {
+    left: 0;
+  }
+  
+  .timeline-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+  }
+  
+  .timeline-content p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  .timeline-img {
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 15px;
+  }
+  
+  .temple-architecture {
+    margin-top: 60px;
+  }
+  
+  .temple-architecture h3 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  /* Contact Section */
+  .contact-info {
+    margin-bottom: 30px;
+  }
+  
+  .contact-info .info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    background-color: transparent;
+    padding: 0;
+    text-align: left;
+  }
+  
+  .contact-info .info-item i {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-right: 15px;
+    min-width: 20px;
+  }
+  
+  .map-container {
+    margin-top: 30px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .contact-form {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--text-dark);
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  textarea.form-control {
+    height: 150px;
+    resize: vertical;
+  }
+  
+  .form-control:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(217, 103, 4, 0.3);
+  }
+  
+  .contact-form .btn {
+    margin-top: 15px;
+    width: 100%;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 992px) {
+    .two-column {
+      grid-template-columns: 1fr;
+    }
+    
+    .aarti-dos-donts {
+      grid-template-columns: 1fr;
+    }
+    
+    .timeline-content {
+      width: 90%;
+      left: 5% !important;
+    }
+    
+    .history-timeline::before {
+      left: 20px;
+      transform: none;
+    }
+    
+    .timeline-marker {
+      left: 20px;
+      transform: none;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+    
+    .section-title h2 {
+      font-size: 1.8rem;
+    }
+    
+    .info-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+    
+    .hero p {
+      font-size: 1rem;
+    }
+    
+    .section-title h2 {
+      font-size: 1.5rem;
+    }
+    
+    .card-container {
+      grid-template-columns: 1fr;
+    }
+  }
+</file>
+
+<file path="src/components/Mahakaleshwar/MahakaleshwarContent.js">
+// MahakaleshwarContent.js
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./HomePage";
+import ContactForm from "./ContactForm";
+// import other pages as needed
+import "./MahakaleshwarContent.css";
+
+const MahakaleshwarContent = () => {
+  return (
+    <div className="main-content">
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        {/* Add more routes here */}
+      </Routes>
+
+      <ContactForm />
+    </div>
+  );
+};
+
+export default MahakaleshwarContent;
+</file>
+
+<file path="src/components/Mahakaleshwar/NearbyAttractionsMahakal.js">
+// NearbyAttractionsMahakalPage.js
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { guideCards } from "../Data";
+
+const NearbyAttractionsMahakalPage = () => {
+  const navigate = useNavigate();
+  const selectedCard = guideCards.find(
+    (card) => card.slug === "nearby-attractions"
+  );
+
+  const handleBackClick = () => {
+    navigate("/");
+  };
+
+  return (
+    <div className="container">
+      <button
+        className="btn"
+        onClick={handleBackClick}
+        style={{ marginBottom: "20px" }}
+      >
+        &larr; Back to Guide
+      </button>
+
+      <div className="section-title">
+        <h2>{selectedCard.title}</h2>
+      </div>
+
+      <div className="two-column">
+        <div className="content-text">
+          <p>{selectedCard.content}</p>
+
+          <h3>Top Nearby Attractions</h3>
+
+          <h4>1. Ram Ghat</h4>
+          <p>
+            Located on the banks of River Shipra, Ram Ghat is a sacred bathing
+            place especially crowded during the Kumbh Mela. Evening aarti here
+            is a beautiful sight.
+          </p>
+
+          <h4>2. Kal Bhairav Temple</h4>
+          <p>
+            A fierce form of Lord Shiva, Kal Bhairav is worshipped with liquor
+            as an offering. It’s one of the most unique temples of Ujjain, just
+            4 km from Mahakal temple.
+          </p>
+
+          <h4>3. Harsiddhi Temple</h4>
+          <p>
+            This Shakti Peeth is located close to the Mahakaleshwar Temple. The
+            temple has beautiful oil lamps and a divine ambiance.
+          </p>
+
+          <h4>4. Sandipani Ashram</h4>
+          <p>
+            Believed to be the place where Lord Krishna, Balarama, and Sudama
+            studied under Guru Sandipani. It has a sacred tank and serene
+            surroundings.
+          </p>
+
+          <h4>5. Vedha Shala (Observatory)</h4>
+          <p>
+            Built by Maharaja Jai Singh, this is an ancient observatory with
+            astronomical instruments still used for calculations and
+            predictions.
+          </p>
+
+          <h4>6. ISKCON Temple</h4>
+          <p>
+            A modern, peaceful temple dedicated to Lord Krishna. Great for
+            spiritual seekers looking for quiet devotion.
+          </p>
+
+          <h4>7. Gopal Mandir</h4>
+          <p>
+            A 19th-century temple built in marble, dedicated to Lord Krishna.
+            The silver-plated doors are said to have once belonged to the
+            Somnath temple.
+          </p>
+        </div>
+
+        <div>
+          <img
+            src={selectedCard.image}
+            alt={selectedCard.title}
+            className="img-responsive"
+          />
+          <div className="info-box">
+            <h4>Attractions Within 5 km</h4>
+            <ul>
+              <li>Ram Ghat</li>
+              <li>Kal Bhairav Temple</li>
+              <li>Harsiddhi Temple</li>
+              <li>Sandipani Ashram</li>
+              <li>Vedha Shala (Observatory)</li>
+              <li>Gopal Mandir</li>
+              <li>ISKCON Ujjain</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default NearbyAttractionsMahakalPage;
+</file>
+
+<file path="src/components/Mahakaleshwar/TemplePages.js">
+// TemplePage.js - Temple info page component
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { guideCards } from "../Data";
+import { Helmet } from "react-helmet";
+
+const TemplePage = () => {
+  const navigate = useNavigate();
+
+  // Find the Mahakaleshwar Temple card data
+  const selectedCard = guideCards.find((card) => card.slug === "temple");
+
+  const handleBackClick = () => {
+    navigate("/");
+  };
+
+  return (
+    <div className="container">
+      <Helmet>
+        <title>Mahakaleshwar Temple, Ujjain | Abode of Lord Shiva</title>
+        <meta
+          name="description"
+          content="Visit Mahakaleshwar Temple in Ujjain—one of the 12 Jyotirlingas. Learn about its history, rituals, timings, and travel tips."
+        />
+      </Helmet>
+      <button
+        className="btn"
+        onClick={handleBackClick}
+        style={{ marginBottom: "20px" }}
+      >
+        &larr; Back to Guide
+      </button>
+
+      <div className="section-title">
+        <h2>{selectedCard.title}</h2>
+      </div>
+
+      <div className="two-column">
+        <div className="content-text">
+          <p>{selectedCard.content}</p>
+
+          <h3>Temple Significance</h3>
+          <p>
+            Mahakaleshwar Jyotirlinga is one of the twelve Jyotirlingas,
+            considered the most sacred abodes of Lord Shiva. The temple is
+            located beside the holy Kshipra river and holds great spiritual
+            importance.
+          </p>
+
+          <h3>Architecture</h3>
+          <p>
+            The temple displays a blend of Rajput and Maratha architectural
+            styles, with a towering shikhara (spire), intricate carvings, and
+            grand entrances. The sanctum houses the Jyotirlinga facing south — a
+            unique feature among the 12 Jyotirlingas.
+          </p>
+
+          <h3>Daily Rituals</h3>
+          <p>
+            Various rituals such as Bhasma Aarti, Rudrabhishek, and Shringar
+            Puja are performed daily. Devotees can witness these rituals by
+            booking slots in advance. Each ritual enhances the temple’s
+            spiritual aura.
+          </p>
+
+          <h3>Festivals Celebrated</h3>
+          <p>
+            Major festivals like Maha Shivratri, Navratri, and Shravan Month see
+            huge footfall at the temple. Special aartis, processions, and
+            cultural events are organized during these periods.
+          </p>
+        </div>
+
+        <div>
+          <img
+            src={selectedCard.image}
+            alt={selectedCard.title}
+            className="img-responsive"
+          />
+          <div className="info-box">
+            <h4>Temple Quick Info</h4>
+            <ul>
+              <li>
+                <strong>Location:</strong> Ujjain, Madhya Pradesh
+              </li>
+              <li>
+                <strong>Deity:</strong> Lord Shiva (Mahakaleshwar)
+              </li>
+              <li>
+                <strong>Speciality:</strong> South-facing Jyotirlinga
+              </li>
+              <li>
+                <strong>Opening Hours:</strong> 4:00 AM – 11:00 PM
+              </li>
+              <li>
+                <strong>Dress Code:</strong> Traditional attire preferred
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default TemplePage;
+</file>
+
+<file path="src/components/Mahakaleshwar/VisitingGuidelinesMahakal.css">
+/* * Contact Section */ 
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  .section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  
+  .section-title h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+  }
+  
+  .section-title::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+  }
+
+.contact-info {
+    margin-bottom: 30px;
+  }
+  
+  .contact-info .info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    background-color: transparent;
+    padding: 0;
+    text-align: left;
+  }
+  
+  .contact-info .info-item i {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-right: 15px;
+    min-width: 20px;
+  }
+  
+  .map-container {
+    margin-top: 30px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .contact-form {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--text-dark);
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  textarea.form-control {
+    height: 150px;
+    resize: vertical;
+  }
+  
+  .form-control:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(217, 103, 4, 0.3);
+  }
+  
+  .contact-form .btn {
+    margin-top: 15px;
+    width: 100%;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 992px) {
+    .two-column {
+      grid-template-columns: 1fr;
+    }
+    
+    .aarti-dos-donts {
+      grid-template-columns: 1fr;
+    }
+    
+    .timeline-content {
+      width: 90%;
+      left: 5% !important;
+    }
+    
+    .history-timeline::before {
+      left: 20px;
+      transform: none;
+    }
+    
+    .timeline-marker {
+      left: 20px;
+      transform: none;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+    
+    .section-title h2 {
+      font-size: 1.8rem;
+    }
+    
+    .info-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+    
+    .hero p {
+      font-size: 1rem;
+    }
+    
+    .section-title h2 {
+      font-size: 1.5rem;
+    }
+    
+    .card-container {
+      grid-template-columns: 1fr;
+    }
+  }
+</file>
+
+<file path="src/components/Mahakaleshwar/VisitingGuidelinesMahakal.js">
+// VisitingGuidelinesMahakalPage.js
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { guideCards } from "../Data";
+
+const VisitingGuidelinesMahakalPage = () => {
+  const navigate = useNavigate();
+  const selectedCard = guideCards.find((card) => card.slug === "guidelines");
+
+  const handleBackClick = () => {
+    navigate("/");
+  };
+
+  return (
+    <div className="container">
+      <button
+        className="btn"
+        onClick={handleBackClick}
+        style={{ marginBottom: "20px" }}
+      >
+        &larr; Back to Guide
+      </button>
+
+      <div className="section-title">
+        <h2>{selectedCard.title}</h2>
+      </div>
+
+      <div className="two-column">
+        <div className="content-text">
+          <p>{selectedCard.content}</p>
+
+          <h3>Temple Timings</h3>
+          <p>
+            The Mahakaleshwar Temple opens early at 4:00 AM and closes at 11:00
+            PM. The temple is closed for a short cleaning break between noon and
+            2:00 PM.
+          </p>
+
+          <h3>Bhasma Aarti Rules</h3>
+          <ul>
+            <li>
+              Pre-registration is mandatory on the official website or app.
+            </li>
+            <li>
+              Only male devotees are allowed inside the sanctum during Bhasma
+              Aarti.
+            </li>
+            <li>Devotees must reach the temple by 3:00 AM to attend.</li>
+          </ul>
+
+          <h3>Dress Code</h3>
+          <p>
+            Traditional and modest clothing is recommended. Men should wear
+            dhoti or pajama-kurta, and women should wear sarees or suits while
+            entering the sanctum.
+          </p>
+
+          <h3>Prohibited Items</h3>
+          <ul>
+            <li>
+              Mobile phones, leather items, tobacco, alcohol, and weapons are
+              strictly prohibited.
+            </li>
+            <li>
+              There are locker facilities available at the temple entrance for
+              your belongings.
+            </li>
+          </ul>
+
+          <h3>Photography & Video</h3>
+          <p>
+            Photography is not allowed inside the Garbhagriha (sanctum).
+            Visitors are requested to respect the sanctity of the temple.
+          </p>
+
+          <h3>Darshan Queue System</h3>
+          <p>
+            There are separate lines for general darshan and special ticketed
+            darshan. Senior citizens and differently-abled persons get priority
+            assistance.
+          </p>
+
+          <h3>Tips for Devotees</h3>
+          <ul>
+            <li>
+              Carry a water bottle, light snacks, and an umbrella during hot
+              months.
+            </li>
+            <li>
+              Do not fall prey to unauthorized guides or donation collectors.
+            </li>
+            <li>
+              Keep temple premises clean and follow instructions of temple
+              staff.
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <img
+            src={selectedCard.image}
+            alt={selectedCard.title}
+            className="img-responsive"
+          />
+          <div className="info-box">
+            <h4>Quick Guidelines</h4>
+            <ul>
+              <li>
+                <strong>Opening Time:</strong> 4:00 AM
+              </li>
+              <li>
+                <strong>Closing Time:</strong> 11:00 PM
+              </li>
+              <li>
+                <strong>Bhasma Aarti:</strong> Pre-booking needed
+              </li>
+              <li>
+                <strong>Dress Code:</strong> Traditional attire
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default VisitingGuidelinesMahakalPage;
+</file>
+
+<file path="src/components/Mahakaleshwar/WeatherGuidePage.css">
+/* * Contact Section */ 
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  .section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  
+  .section-title h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+  }
+  
+  .section-title::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+  }
+
+.contact-info {
+    margin-bottom: 30px;
+  }
+  
+  .contact-info .info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    background-color: transparent;
+    padding: 0;
+    text-align: left;
+  }
+  
+  .contact-info .info-item i {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-right: 15px;
+    min-width: 20px;
+  }
+  
+  .map-container {
+    margin-top: 30px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .contact-form {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--text-dark);
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  textarea.form-control {
+    height: 150px;
+    resize: vertical;
+  }
+  
+  .form-control:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(217, 103, 4, 0.3);
+  }
+  
+  .contact-form .btn {
+    margin-top: 15px;
+    width: 100%;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 992px) {
+    .two-column {
+      grid-template-columns: 1fr;
+    }
+    
+    .aarti-dos-donts {
+      grid-template-columns: 1fr;
+    }
+    
+    .timeline-content {
+      width: 90%;
+      left: 5% !important;
+    }
+    
+    .history-timeline::before {
+      left: 20px;
+      transform: none;
+    }
+    
+    .timeline-marker {
+      left: 20px;
+      transform: none;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+    
+    .section-title h2 {
+      font-size: 1.8rem;
+    }
+    
+    .info-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+    
+    .hero p {
+      font-size: 1rem;
+    }
+    
+    .section-title h2 {
+      font-size: 1.5rem;
+    }
+    
+    .card-container {
+      grid-template-columns: 1fr;
+    }
+  }
+</file>
+
+<file path="src/components/Mahakaleshwar/WeatherGuidePage.js">
+// WeatherGuidePage.js - Weather guide page component
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { guideCards } from "../Data";
+
+const WeatherGuidePage = () => {
+  const navigate = useNavigate();
+
+  // Find the Weather Guide card data
+  const selectedCard = guideCards.find((card) => card.slug === "weather");
+
+  const handleBackClick = () => {
+    navigate("/");
+  };
+
+  return (
+    <div className="container">
+      <button
+        className="btn"
+        onClick={handleBackClick}
+        style={{ marginBottom: "20px" }}
+      >
+        &larr; Back to Guide
+      </button>
+      <div className="section-title">
+        <h2>{selectedCard.title}</h2>
+      </div>
+      <div className="two-column">
+        <div className="content-text">
+          <p>{selectedCard.content}</p>
+
+          <h3>Summer (March - June)</h3>
+          <p>
+            Summers in Ujjain are hot and dry. Temperatures often soar above
+            40°C during peak summer months of April and May. Early mornings and
+            evenings are relatively comfortable. If visiting during summer, it's
+            advisable to carry light cotton clothes, sunscreen, hats, and stay
+            hydrated. Temple visits are best scheduled early morning or evening
+            to avoid the intense midday heat.
+          </p>
+
+          <h3>Monsoon (July - September)</h3>
+          <p>
+            The monsoon season brings moderate rainfall to Ujjain, turning the
+            surroundings lush green. The temperature drops to a comfortable
+            range of 25°C to 35°C. While this season offers respite from the
+            summer heat, occasional heavy downpours might disrupt travel plans.
+            Carry umbrellas, waterproof footwear, and light raincoats if
+            visiting during this period.
+          </p>
+
+          <h3>Winter (October - February)</h3>
+          <p>
+            Winter is the most pleasant time to visit Mahakaleshwar Temple. Days
+            are sunny with temperatures ranging from 15°C to 25°C, while nights
+            can get cooler with temperatures dropping to 8°C to 12°C. Light
+            woolen clothes are recommended, especially for early morning Bhasma
+            Aarti. The clear skies and comfortable weather make it ideal for
+            temple visits and exploring other attractions in Ujjain.
+          </p>
+
+          <h3>Best Time to Visit</h3>
+          <p>
+            The best time to visit Mahakaleshwar Temple is during the winter
+            months (October to February) when the weather is pleasant for
+            sightseeing and temple visits. The festive season of Mahashivratri
+            (February/March) is special but expect larger crowds. If visiting
+            during summer, early morning or evening visits are recommended.
+          </p>
+        </div>
+        <div>
+          <img
+            src={selectedCard.image}
+            alt={selectedCard.title}
+            className="img-responsive"
+          />
+          <div className="weather-chart">
+            <h4>Seasonal Temperature Guide</h4>
+            <table className="weather-table">
+              <thead>
+                <tr>
+                  <th>Season</th>
+                  <th>Months</th>
+                  <th>Temperature Range</th>
+                  <th>Recommendation</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Summer</td>
+                  <td>Mar - Jun</td>
+                  <td>30°C - 45°C</td>
+                  <td>Early morning visits</td>
+                </tr>
+                <tr>
+                  <td>Monsoon</td>
+                  <td>Jul - Sep</td>
+                  <td>25°C - 35°C</td>
+                  <td>Carry rain protection</td>
+                </tr>
+                <tr>
+                  <td>Winter</td>
+                  <td>Oct - Feb</td>
+                  <td>8°C - 25°C</td>
+                  <td>Most recommended</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default WeatherGuidePage;
+</file>
+
+<file path="src/components/MahakalTourPackages.css">
+/* MahakalTourPackages.css - Enhanced Responsiveness */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #e67e22;
+  --secondary-color: #f39c12;
+  --accent-color: #d35400;
+  --text-dark: #2c3e50;
+  --text-medium: #34495e;
+  --text-light: #7f8c8d;
+  --bg-color: #f8f8f8;
+  --card-bg: #ffffff;
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+  --border-radius: 12px;
+  --transition: all 0.3s ease;
+}
+
+.mahakal-tour-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 20px; /* Reduced side padding for smaller screens */
+  font-family: 'Poppins', sans-serif;
+  background-color: white;
+  color: var(--text-dark);
+  width: 100%;
+  box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.mahakal-header {
+  text-align: center;
+  margin-bottom: 40px; /* Slightly reduced for mobile */
+}
+
+.mahakal-tour-title {
+  font-size: 2.5rem;
+  color: var(--text-dark);
+  margin-bottom: 15px;
+  font-weight: 700;
+  word-wrap: break-word; /* Prevents text overflow on small screens */
+}
+
+.divine-line {
+  height: 3px;
+  width: 80px;
+  margin: 0 auto;
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  position: relative;
+}
+
+.divine-line::before, 
+.divine-line::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.divine-line::before {
+  left: -10px;
+}
+
+.divine-line::after {
+  right: -10px;
+}
+
+.mahakal-packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  width: 100%;
+}
+
+.mahakal-package-card {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  cursor: pointer;
+  width: 100%; /* Changed from fixed 300px to 100% */
+  max-width: 350px; /* Added max-width for larger screens */
+  gap: 10px;
+  margin: 0 auto;
+}
+
+.mahakal-package-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+}
+
+.mahakal-package-card.active {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--primary-color);
+}
+
+.card-accent-top {
+  height: 8px;
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+}
+
+.package-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  background-color: rgba(243, 156, 18, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 11px auto 10px;
+  position: relative;
+  z-index: 2;
+  border: 6px solid white;
+  box-shadow: var(--shadow-sm);
+}
+
+.package-icon {
+  font-size: 2.5rem;
+}
+
+.package-header {
+  text-align: center;
+  padding: 0 15px; /* Reduced padding for smaller screens */
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.package-title {
+  color: var(--text-dark);
+  font-size: 1.4rem;
+  margin: 5px 0;
+  font-weight: 600;
+  word-wrap: break-word; /* Prevents text overflow */
+}
+
+.package-subtitle {
+  color: var(--accent-color);
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin: 5px 0;
+}
+
+.package-price {
+  text-align: center;
+  margin-bottom: 20px; /* Slightly reduced */
+  padding: 0 15px; /* Reduced padding */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.price-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  display: block;
+}
+
+.price-note {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-left: 5px;
+}
+
+.per-person {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  display: block;
+}
+
+.feature-divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.1), transparent);
+  margin: 0 15px 20px; /* Adjusted margins */
+  width: calc(100% - 30px); /* Ensures proper width */
+}
+
+.package-details {
+  padding: 0 15px; /* Reduced padding */
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: var(--text-medium);
+  display: block;
+  margin-bottom: 5px;
+}
+
+.package-duration {
+  margin-bottom: 15px;
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping if needed */
+}
+
+.detail-value {
+  color: var(--text-medium);
+}
+
+.package-includes ul {
+  padding-left: 20px;
+  margin: 8px 0;
+}
+
+.package-includes li {
+  color: var(--text-medium);
+  margin-bottom: 8px;
+  position: relative;
+  word-wrap: break-word; /* For longer text items */
+}
+
+.package-includes li::marker {
+  color: var(--primary-color);
+}
+
+.package-description {
+  padding: 0 15px; /* Reduced padding */
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  line-height: 1.6;
+  flex-grow: 1;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.package-description p {
+  margin: 0;
+  word-wrap: break-word; /* Ensures text doesn't overflow */
+}
+
+.book-now-btn {
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  color: white;
+  border: none;
+  padding: 12px 20px; /* Slightly reduced padding */
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 15px 20px; /* Adjusted margins */
+  border-radius: 6px;
+  width: calc(100% - 30px); /* Ensures proper width */
+}
+
+.book-now-btn:hover {
+  background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
+}
+
+.btn-icon {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.book-now-btn:hover .btn-icon {
+  transform: translateX(5px);
+}
+
+/* Enhanced Responsive Design */
+@media (max-width: 1200px) {
+  .mahakal-packages-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .mahakal-tour-container {
+    padding: 30px 15px;
+  }
+  
+  .mahakal-packages-grid {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+  }
+  
+  .mahakal-tour-title {
+    font-size: 2.2rem;
+  }
+  
+  .package-icon-wrapper {
+    width: 75px;
+    height: 75px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mahakal-tour-container {
+    padding: 25px 12px;
+  }
+  
+  .mahakal-packages-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    justify-items: center;
+  }
+  
+  .mahakal-tour-title {
+    font-size: 2rem;
+  }
+  
+  .package-icon-wrapper {
+    width: 70px;
+    height: 70px;
+    margin-top: 15px;
+  }
+  
+  .package-icon {
+    font-size: 2.2rem;
+  }
+  
+  .package-title {
+    font-size: 1.3rem;
+  }
+  
+  .price-value {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .mahakal-packages-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+  
+  .mahakal-tour-title {
+    font-size: 1.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mahakal-tour-container {
+    padding: 40px 20px; 
+  }
+  
+  .mahakal-header {
+    margin-bottom: 30px;
+  }
+  
+  .mahakal-packages-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .mahakal-package-card {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .mahakal-tour-title {
+    font-size: 1.7rem;
+  }
+  
+  .package-title {
+    font-size: 1.25rem;
+  }
+  
+  .package-icon-wrapper {
+    width: 65px;
+    height: 65px;
+  }
+  
+  .package-icon {
+    font-size: 2rem;
+  }
+  
+  .book-now-btn {
+    padding: 10px 16px;
+  }
+}
+
+@media (max-width: 380px) {
+  .mahakal-tour-title {
+    font-size: 1.5rem;
+  }
+  
+  .package-header {
+    padding: 0 10px;
+  }
+  
+  .package-title {
+    font-size: 1.2rem;
+  }
+  
+  .package-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .package-price {
+    padding: 0 10px;
+  }
+  
+  .price-value {
+    font-size: 1.7rem;
+  }
+  
+  .package-details, 
+  .package-description {
+    padding: 0 10px;
+  }
+  
+  .book-now-btn {
+    margin: 0 10px 15px;
+    width: calc(100% - 20px);
+    padding: 10px 15px;
+  }
+}
+</file>
+
+<file path="src/components/MahakalTourPackages.js">
+import React, { useState } from 'react';
+import './MahakalTourPackages.css';
+
+const MahakalTourPackages = () => {
+  const [activePackage, setActivePackage] = useState(null);
+
+  const packages = [
+    {
+      id: 1,
+      icon: "🕉️",
+      title: "Mahakaleshwar Darshan Express",
+      subtitle: "1 Day Trip",
+      duration: "1 Day",
+      includes: ["VIP Darshan Pass", "Rudrabhishek Puja", "Mandir Prasad", "Local Guide"],
+      price: "₹999",
+      description: "Experience the divine energy of Mahakaleshwar with a same-day darshan package. Skip the lines with VIP access and perform Rudrabhishek under the guidance of our experienced priests."
+    },
+    {
+      id: 2,
+      icon: "🔱",
+      title: "Mahakal Weekend Retreat Express",
+      subtitle: "2 Days / 1 Night",
+      duration: "2 Days / 1 Night",
+      includes: ["3-star Hotel Stay", "VIP Darshan", "Evening Aarti Experience", "Complimentary Breakfast"],
+      price: "₹2,499",
+      description: "Perfect for weekend travellers, this package lets you soak in the spiritual vibe of Mahakaleshwar Mandir and spend a peaceful night in Ujjain with all amenities arranged."
+    },
+    {
+      id: 3,
+      icon: "🧘‍♂️",
+      title: "Mahakal + Omkareshwar Jyotirling Yatra",
+      subtitle: "3 Days / 2 Nights",
+      duration: "3 Days / 2 Nights",
+      includes: ["AC Cab Travel", "Hotel Stay (Ujjain + Omkareshwar)", "VIP Darshan at both Jyotirlingas", "Puja Kit"],
+      price: "₹5,999",
+      description: "Cover two sacred Jyotirlingas in one divine journey. Start at Mahakaleshwar and complete your yatra with Omkareshwar Darshan. Cab, hotels, and darshan – all taken care of."
+    },
+    {
+      id: 4,
+      icon: "🚩",
+      title: "Ujjain Spiritual Trail",
+      subtitle: "5 Days Pilgrimage Tour",
+      duration: "5 Days / 4 Nights",
+      includes: ["Mahakaleshwar, Omkareshwar, Kal Bhairav, Mangalnath, Ram Ghat visit", "Daily puja and spiritual session", "Guide for each temple", "Comfortable stay & meals"],
+      price: "₹9,999",
+      description: "An immersive spiritual journey across Ujjain's most divine spots. Get deeper into the heart of India's spiritual capital with personalized rituals and expert guides."
+    },
+    // {
+    //   id: 5,
+    //   icon: "💫",
+    //   title: "Custom Mahakal Group Tour",
+    //   subtitle: "On Request",
+    //   duration: "Custom",
+    //   includes: ["Custom itinerary", "Hotel + Cab + Food + Darshan"],
+    //   price: "₹7,500",
+    //   priceNote: "for 2 people",
+    //   description: "Travelling in a group or planning a family visit? We offer fully customizable Mahakal tour plans tailored to your timing and budget. Just drop your requirements and let us plan your spiritual trip."
+    // },
+    // {
+    //     id: 6,
+    //     icon: "🔥",
+    //     title: "Mahakal Sunrise Aarti & Wellness Retreat",
+    //     subtitle: "2 Days / 1 Night",
+    //     duration: "2 Days / 1 Night",
+    //     includes: [
+    //         "Bhasma Aarti VIP Entry",
+    //         "Morning Meditation at Ram Ghat",
+    //         "Ayurvedic Massage Session",
+    //         "Stay at Heritage Ashram"
+    //     ],
+    //     price: "₹3,499",
+    //     description: "Awaken your soul with the sacred Bhasma Aarti at dawn followed by a rejuvenating wellness retreat. Ideal for seekers wanting a peaceful escape with spiritual and wellness balance."
+    // }
+    
+  ];
+
+  const handlePackageClick = (id) => {
+    setActivePackage(activePackage === id ? null : id);
+  };
+
+  return (
+    <div className="mahakal-tour-container">
+      <div className="mahakal-header">
+        <h1 className="mahakal-tour-title">Suggested Mahakal Tour Packages</h1>
+        <div className="divine-line"></div>
+      </div>
+      
+      <div className="mahakal-packages-grid">
+        {packages.map(pkg => (
+          <div 
+            key={pkg.id} 
+            className={`mahakal-package-card ${activePackage === pkg.id ? 'active' : ''}`}
+            onClick={() => handlePackageClick(pkg.id)}
+          >
+            <div className="card-accent-top"></div>
+            
+            <div className="package-icon-wrapper">
+              <span className="package-icon">{pkg.icon}</span>
+            </div>
+            
+            <div className="package-header">
+              <h2 className="package-title">{pkg.title}</h2>
+              <h3 className="package-subtitle">{pkg.subtitle}</h3>
+            </div>
+            
+            <div className="package-price">
+              <span className="price-value">{pkg.price}</span>
+              {pkg.priceNote && <span className="price-note">{pkg.priceNote}</span>}
+              <span className="per-person">per person</span>
+            </div>
+            
+            <div className="feature-divider"></div>
+            
+            <div className="package-details">
+              <div className="package-duration">
+                <span className="detail-label">Duration:&nbsp;&nbsp;</span>
+                <span className="detail-value">{pkg.duration}</span>
+              </div>
+              
+              <div className="package-includes">
+                <span className="detail-label">Includes:</span>
+                <ul>
+                  {pkg.includes.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            
+            <div className="package-description">
+              <p style={{color:"black"}}>{pkg.description}</p>
+            </div>
+            
+            <button className="book-now-btn">
+              Book Now
+              <span className="btn-icon">→</span>
+            </button>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default MahakalTourPackages;
+</file>
+
+<file path="src/components/Navbar.css">
+/* NavbarStyles.css */
+:root {
+  --primary-color: #e46e0f;
+  --secondary-color: #c04b1d;
+  --accent-color: #e6dbce;
+  --light-color: #f8e6cc;
+  --dark-color: #e46e0f;
+  --text-dark: #333;
+  --text-light: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+.header {
+  width: 100%;
+  position: relative;
+}
+
+/* Top Navigation Menu */
+.top-nav {
+  background-color: var(--primary-color);
+  padding: 0 15px;
+}
+
+.top-menu {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+}
+
+.top-menu li {
+  position: relative;
+}
+
+.top-menu li a {
+  display: block;
+  padding: 12px 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.top-menu li a:hover {
+  background-color: var(--dark-color);
+  color: var(--text-light);
+}
+
+.top-menu li a.highlight {
+  background-color: var(--dark-color);
+  color: var(--text-light);
+}
+
+/* Site Branding - Middle Section */
+.site-branding {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px;
+  background-color: var(--light-color);
+  
+}
+
+.site-title {
+  text-align: center;
+}
+
+.site-title h1 {
+  color: var(--primary-color);
+  font-size: 32px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.site-subtitle {
+  color: var(--dark-color);
+  font-style: italic;
+}
+
+.tourism-badge-img, .bells-img {
+  max-height: 50px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-end; */
+  gap: 5px;
+}
+
+.call-us, .mail-us, .app-download {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  color: var(--dark-color);
+}
+
+.call-us a, .mail-us a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.whatsapp-icon, .email-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Main Navigation with Dropdowns */
+.main-nav {
+  background-color: var(--dark-color);
+}
+
+.main-menu {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: space-around;
+}
+
+.main-menu > li {
+  position: relative;
+}
+
+.main-menu > li > a {
+  display: block;
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.main-menu > li > a:hover {
+  background-color: var(--primary-color);
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--accent-color);
+  min-width: 220px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 100;
+  list-style: none;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 12px 15px;
+  color: var(--text-dark);
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.dropdown-menu li a:hover {
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+}
+
+/* Mobile Menu Toggles */
+.mobile-menu-toggle, .main-menu-toggle {
+  display: none;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  border: none;
+  padding: 10px 15px;
+  font-size: 18px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+  .site-branding {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .contact-info {
+    margin-top: 10px;
+    align-items: center;
+  }
+  
+  .top-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .top-menu li {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .main-menu {
+    flex-direction: column;
+  }
+  
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-menu-toggle, .main-menu-toggle {
+    display: block;
+  }
+  
+  .top-nav, .main-nav {
+    display: none;
+  }
+  
+  .top-nav.show, .main-nav.show {
+    display: block;
+  }
+  
+  .site-title {
+    margin-bottom: 15px;
+  }
+  
+  .tourism-badge, .temple-bells {
+    margin: 5px 0;
+  }
+  
+  .contact-info {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .call-us, .mail-us, .app-download {
+    justify-content: center;
+  }
+  
+  .main-menu > li > a {
+    text-align: left;
+    padding-left: 30px;
+  }
+  
+  .dropdown-menu li a {
+    padding-left: 45px;
+  }
+}
+</file>
+
+<file path="src/components/Navbar.js">
+import React, { useState } from 'react';
+import './Navbar.css';
+
+const Navbar = () => {
+  const [showTopMenu, setShowTopMenu] = useState(false);
+  const [showMainMenu, setShowMainMenu] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null);
+
+  const toggleTopMenu = () => {
+    setShowTopMenu(!showTopMenu);
+  };
+
+  const toggleMainMenu = () => {
+    setShowMainMenu(!showMainMenu);
+  };
+
+  const toggleDropdown = (index) => {
+    setActiveDropdown(activeDropdown === index ? null : index);
+  };
+
+  return (
+    <header className="header">
+      {/* Top Menu Bar */}
+      <button className="mobile-menu-toggle" onClick={toggleTopMenu}>
+        ☰ Top Menu
+      </button>
+      
+      <nav className={`top-nav ${showTopMenu ? 'show' : ''}`}>
+        <ul className="top-menu">
+          <li><a href="/">Home</a></li>
+          <li><a href="/mahakaleshwar">Mahakaleshwar</a></li>
+          <li><a href="/harsiddhi-mata">Harsiddhi Mata</a></li>
+          <li><a href="/kal-bhairav">Kal Bhairav</a></li>
+          <li><a href="/mangalnath-mandir">Mangalnath Mandir</a></li>
+          <li><a href="/hotels">Hotels</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/b2b-registration">B2B Registration</a></li>
+          <li><a href="/register">Register</a></li>
+          <li><a href="/booking-form">Booking Form</a></li>
+          <li><a href="/pay-online">Pay Online</a></li>
+         
+        </ul>
+      </nav>
+
+      {/* Middle Logo and Info Section */}
+      <div className="site-branding">
+        <div className="site-title">
+          <h1>Ujjain Mahakal</h1>
+          <div className="site-subtitle">Spiritual Journey</div>
+        </div>
+        
+        {/* <div className="tourism-badge">
+          <img src="/tourism-badge.png" alt="Approved by MP Tourism" className="tourism-badge-img" />
+        </div>
+        
+        <div className="temple-bells">
+          <img src="/bells.png" alt="Temple Bells" className="bells-img" />
+        </div>
+         */}
+        <div className="contact-info">
+          <div className="call-us">
+            <span>Call Us: </span>
+            <a href="tel:+91XXXXXXXXXX"><img src="/whatsapp.png" alt="WhatsApp" className="whatsapp-icon" /> +91-XXXXXXXXXX</a>
+          </div>
+          <div className="mail-us">
+            <span>Mail Us: </span>
+            <a href="mailto:yatra@mahakaltour.in"><img src="/email.png" alt="Email" className="email-icon" /> yatra@mahakaltour.in</a>
+          </div>
+          <div className="app-download">
+            <span>Android & iPhone App</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Main Menu */}
+      <button className="main-menu-toggle" onClick={toggleMainMenu}>
+        ☰ Main Menu
+      </button>
+
+      <nav className={`main-nav ${showMainMenu ? 'show' : ''}`}>
+        <ul className="main-menu">
+          <li className="dropdown">
+            <a href="#" onClick={() => toggleDropdown(0)}>
+              Darshan Tours {activeDropdown === 0 ? '▲' : '▼'}
+            </a>
+            <ul className={`dropdown-menu ${activeDropdown === 0 ? 'show' : ''}`}>
+              <li><a href="/mahakaleshwar-darshan">Mahakaleshwar Darshan</a></li>
+              <li><a href="/bhasma-aarti-booking">Bhasma Aarti Booking</a></li>
+              <li><a href="/special-entry-passes">Special Entry Passes</a></li>
+              <li><a href="/mandir-parikrama">Mandir Parikrama</a></li>
+            </ul>
+          </li>
+
+          <li className="dropdown">
+            <a href="#" onClick={() => toggleDropdown(1)}>
+              Ujjain Yatra {activeDropdown === 1 ? '▲' : '▼'}
+            </a>
+            <ul className={`dropdown-menu ${activeDropdown === 1 ? 'show' : ''}`}>
+              <li><a href="/1-day-ujjain-darshan">1 Day Ujjain Darshan</a></li>
+              <li><a href="/ujjain-omkareshwar-yatra">Ujjain + Omkareshwar Yatra</a></li>
+              <li><a href="/ujjain-with-indore-tour">Ujjain with Indore Tour</a></li>
+              <li><a href="/pilgrimage-taxi-packages">Pilgrimage Taxi Packages</a></li>
+            </ul>
+          </li>
+
+          <li className="dropdown">
+            <a href="#" onClick={() => toggleDropdown(2)}>
+              Temple Wise Darshan {activeDropdown === 2 ? '▲' : '▼'}
+            </a>
+            <ul className={`dropdown-menu ${activeDropdown === 2 ? 'show' : ''}`}>
+              <li><a href="/harsiddhi-mata-darshan">Harsiddhi Mata Darshan</a></li>
+              <li><a href="/kal-bhairav-temple-visit">Kal Bhairav Temple Visit</a></li>
+              <li><a href="/mangalnath-temple-tour">Mangalnath Temple Tour</a></li>
+              <li><a href="/chintaman-ganesh-darshan">Chintaman Ganesh Darshan</a></li>
+              <li><a href="/sandipani-ashram-visit">Sandipani Ashram Visit</a></li>
+            </ul>
+          </li>
+
+          <li className="dropdown">
+            <a href="#" onClick={() => toggleDropdown(3)}>
+              Hotels Near Mandir {activeDropdown === 3 ? '▲' : '▼'}
+            </a>
+            <ul className={`dropdown-menu ${activeDropdown === 3 ? 'show' : ''}`}>
+              <li><a href="/hotels-near-mahakal-temple">Hotels Near Mahakal Temple</a></li>
+              <li><a href="/hotels-near-railway-station">Hotels Near Railway Station</a></li>
+              <li><a href="/budget-deluxe-hotels">Budget & Deluxe Hotels</a></li>
+              <li><a href="/dharamshala-booking">Dharamshala Booking</a></li>
+            </ul>
+          </li>
+
+          <li className="dropdown">
+            <a href="#" onClick={() => toggleDropdown(4)}>
+              Useful Links {activeDropdown === 4 ? '▲' : '▼'}
+            </a>
+            <ul className={`dropdown-menu ${activeDropdown === 4 ? 'show' : ''}`}>
+              <li><a href="/train-timings">Train Timings</a></li>
+              <li><a href="/aarti-timings">Aarti Timings</a></li>
+              <li><a href="/local-transport">Local Transport</a></li>
+              <li><a href="/travel-checklist">Travel Checklist</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="/travel-community">Travel Community</a>
+          </li>
+
+          <li className="dropdown">
+            <a href="#" onClick={() => toggleDropdown(5)}>
+              Customer Support {activeDropdown === 5 ? '▲' : '▼'}
+            </a>
+            <ul className={`dropdown-menu ${activeDropdown === 5 ? 'show' : ''}`}>
+              <li><a href="/help-center">Help Center</a></li>
+              <li><a href="/contact-form">Contact Form</a></li>
+              <li><a href="/faqs">FAQs</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  );
+};
+
+export default Navbar;
+</file>
+
+<file path="src/components/TemplePage.js">
+// TemplePage.js - Temple page component
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { guideCards } from './Data';
+
+const TemplePage = () => {
+  const navigate = useNavigate();
+  
+  // Find the temple card data
+  const selectedCard = guideCards.find(card => card.slug === 'temple');
+  
+  const handleBackClick = () => {
+    navigate('/');
+  };
+  
+  return (
+    <div className="container">
+      <button className="btn" onClick={handleBackClick} style={{ marginBottom: '20px' }}>
+        &larr; Back to Guide
+      </button>
+      <div className="section-title">
+        <h2>{selectedCard.title}</h2>
+      </div>
+      <div className="two-column">
+        <div className="content-text">
+          <p>{selectedCard.content}</p>
+          <h3>Temple Structure</h3>
+          <p>The Mahakaleshwar Temple has a unique structure with five levels. The idol of Lord Mahakaleshwar is placed on the lowest level. The temple is one of the few Jyotirlingas where the Shivalinga faces south, which is considered a rare and significant feature. The lingam at Mahakaleshwar is believed to be swayambhu (self-manifested).</p>
+          
+          <h3>Religious Significance</h3>
+          <p>As one of the twelve Jyotirlingas, Mahakaleshwar holds immense religious significance in Hinduism. The temple is mentioned in various ancient texts including the Puranas. It is believed that offering prayers at this temple fulfills one's wishes and cleanses one's soul. The energy of the place is said to be so powerful that it can transform one's life.</p>
+          
+          <h3>Daily Rituals</h3>
+          <p>The temple follows a strict routine of daily rituals. The day begins with the Bhasma Aarti, followed by various poojas throughout the day. The Shivalinga is adorned with different offerings at different times of the day, including milk, water, bel leaves, flowers, and sandalwood paste. The temple also observes special rituals on Mondays and during the holy month of Shravan.</p>
+        </div>
+        <div>
+          <img src={selectedCard.image} alt={selectedCard.title} className="img-responsive" />
+          <div className="temple-highlights">
+            <h4>Temple Highlights</h4>
+            <ul className="highlight-list">
+              <li><strong>Status:</strong> One of the 12 Jyotirlingas</li>
+              <li><strong>Unique Feature:</strong> South-facing Lingam</li>
+              <li><strong>Main Deity:</strong> Lord Shiva as Mahakaleshwar</li>
+              <li><strong>Special Ritual:</strong> Bhasma Aarti at 4:00 AM</li>
+              <li><strong>Temple Timings:</strong> 4:00 AM to 11:00 PM</li>
+              <li><strong>Break Time:</strong> 12:30 PM to 3:30 PM</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default TemplePage;
+</file>
+
+<file path="src/components/TempleSection.css">
+/* Temple Section Styles */
+.temples-section {
+    padding: 60px 8px;
+    background-color: white;
+  }
+  
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px; /* Reduced side padding for smaller screens */
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+    font-weight: 700;
+  }
+  
+  .section-subtitle {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 40px;
+    color: #666;
+  }
+  
+  .temple-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .temple-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* Make cards responsive */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .temple-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  .temple-image {
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .temple-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .temple-card:hover .temple-image img {
+    transform: scale(1.1);
+  }
+  
+  .temple-info {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .temple-name {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #d96704;
+    font-weight: 600;
+  }
+  
+  .temple-location {
+    font-size: 14px;
+    color: #ff8c00;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  
+  .temple-description {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    flex-grow: 1;
+  }
+  
+  .temple-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+  }
+  
+  .temple-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .view-btn {
+    background-color: transparent;
+    border: 1px solid #d96704;
+    color: #d96704;
+  }
+  
+  .view-btn:hover {
+    background-color: #d96704;
+    color: white;
+  }
+  
+  .book-btn {
+    background-color: #ff8c00;
+    color: white;
+    border: 1px solid #ff8c00;
+  }
+  
+  .book-btn:hover {
+    background-color: #e67e00;
+  }
+  
+  /* Improved Responsive Styles */
+  @media screen and (max-width: 1200px) {
+    .temple-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media screen and (max-width: 992px) {
+    .temple-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .temple-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+    
+    .section-title {
+      font-size: 28px;
+    }
+    
+    .container {
+      padding: 30px 15px;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .temple-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .temples-section {
+      padding: 40px 0;
+    }
+    
+    .temple-image {
+      height: 180px;
+    }
+    
+    .temple-card {
+      max-width: 100%;
+    }
+  }
+</file>
+
+<file path="src/components/TempleSection.js">
+import React from "react";
+import "./TempleSection.css";
+import m1 from "../images/m1.webp";
+import m2 from "../images/m2.jpg";
+import m3 from "../images/m3.jpg";
+import m4 from "../images/m4.png";
+import m5 from "../images/m5.jpg";
+import m6 from "../images/m6.jpg";
+import m7 from "../images/m7.jpg";
+import m8 from "../images/m8.jpg";
+
+function TempleSection() {
+    const temples = [
+        {
+            id: 1,
+            name: "Shri Mahakaleshwar Jyotirling Mandir",
+            description:
+                "12 Jyotirlingon mein se ek, ye mandir Shiv bhakton ke liye atyant pavitra sthal hai. Yahan ka Bhasma Aarti vishesh roop se mashhoor hai.",
+            image: m1,
+            location: "Ujjain city center",
+        },
+        {
+            id: 2,
+            name: "Shri Kal Bhairav Mandir",
+            description:
+                "Kal Bhairav Shiv ji ka roop hai. Yahan bhakton dwara sharab chadhai jaati hai, jo is mandir ko alag banata hai. Bhakton ka maanna hai ki Kal Bhairav is prasad ko swayam grahan karte hain.",
+            image: m2,
+            location: "2 km from Mahakal Temple",
+        },
+        {
+            id: 3,
+            name: "Harsiddhi Mandir",
+            description:
+                "Devi Harsiddhi ko samarpit mandir, Shaktipeethon mein se ek. Yahan ka deep stambh raat mein prakash se roshan hota hai, jo drishya bahut manmohak lagta hai.",
+            image: m3,
+            location: "1.5 km from Mahakal Temple",
+        },
+        {
+            id: 4,
+            name: "Mangalnath Mandir",
+            description:
+                "Jyotish shastra ke hisab se yeh Mangal grah ka janmsthan maana jata hai, jo ise atyant vishesh banata hai. Astrologers yahan niyamit roop se puja karwate hain Mangal dosh ke nivaran ke liye.",
+            image: m4,
+            location: "2.5 km from Mahakal Temple",
+        },
+        {
+            id: 5,
+            name: "Chintaman Ganesh Mandir",
+            description:
+                "Bahut purana Ganesh mandir, jahan log apni chintayein door karne aate hain. Mandir ka maha-prasad aur shaanti bhari jagah logon ko behad pasand aati hai.",
+            image: m5,
+            location: "3 km from Mahakal Temple",
+        },
+        {
+            id: 6,
+            name: "Ram Ghat (Shipra Nadi ke kinare)",
+            description:
+                "Mahakal mandir ke paas hi hai, yahan Snan aur evening aarti hoti hai. Kumbh Mela ke dauraan yahaan vishesh bheed hoti hai.",
+            image: m6,
+            location: "1 km from Mahakal Temple",
+        },
+        {
+            id: 7,
+            name: "Shri Vikrant Bhairav Mandir",
+            description:
+                "Vikrant Bhairav Mandir Ujjain ke rahasyamayi aur shaktishaali mandiron mein se ek hai. Yahan log raksha aur shakti prapt karne ke liye aate hain.",
+            image: m7,
+            location: "4 km from Mahakal Temple",
+        },
+        {
+            id: 8,
+            name: "Shri Gopal Mandir",
+            description:
+                "Gopal Mandir Shri Krishna ko samarpit hai, jahan bhakton ka gehra aastha hai. Yeh mandir Ujjain ke sabse bade aur adbhut shilp-kala se yukt dharmik sthal mein gina jata hai.",
+            image: m8,
+            location: "In Ujjain city, near Mahakal Mandir",
+        },
+    ];
+
+    return (
+        <section className="temples-section" id="temples">
+            <div className="container">
+                <h2 className="section-title">Divine Spots Near Mahakal</h2>
+                <p className="section-subtitle">
+                    Here are some prominent temples you can visit in Ujjain.
+                </p>
+
+                <div className="temple-grid">
+                    {temples.map((temple) => (
+                        <div className="temple-card" key={temple.id}>
+                            <div className="temple-image">
+                                <img src={temple.image} alt={temple.name} />
+                            </div>
+                            <div className="temple-info">
+                                <h3 className="temple-name">{temple.name}</h3>
+                                <p className="temple-location">📍 {temple.location}</p>
+                                <p className="temple-description">{temple.description}</p>
+                                <div className="temple-actions">
+                                    <button className="temple-btn view-btn">Details</button>
+                                    <button className="temple-btn book-btn">Book Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+}
+
+export default TempleSection;
+</file>
+
+<file path="src/components/TourPackageCards.js">
+import { useState } from "react";
+import m3 from "../images/m3.jpg";
+import m4 from "../images/m4.png";
+import m5 from "../images/m5.jpg";
+import m6 from "../images/m6.jpg";
+
+export default function TourPackageCards() {
+    const [activeTab, setActiveTab] = useState(0);
+
+    const packages = [
+        {
+            title: "Mahakaleshwar Darshan by Helicopter",
+            duration: "1 Day (Same Day Return)",
+            route: "Indore → Ujjain → Indore",
+            price: "55,000/-",
+            originalPrice: "60,000/-",
+            features: ["VIP Darshan", "Helicopter", "Hotel", "Meals", "Sightseeing"],
+            image: m3,
+        },
+        {
+            title: "Ujjain & Omkareshwar Jyotirling Darshan",
+            duration: "2 Days & 1 Night",
+            route: "Indore → Omkareshwar → Ujjain → Indore",
+            price: "85,000/-",
+            originalPrice: "90,000/-",
+            features: ["VIP Darshan", "Helicopter", "Hotel", "Meals", "Sightseeing"],
+            image: m4,
+        },
+        {
+            title: "Ujjain Mahakal with Local Sightseeing",
+            duration: "1 Day",
+            route:
+                "Ujjain → Mahakaleshwar → Kal Bhairav → Ram Ghat → Sandipani Ashram",
+            price: "5,999/-",
+            originalPrice: "6,999/-",
+            features: ["VIP Darshan", "Hotel", "Meals", "Sightseeing"],
+            image: m5,
+        },
+        {
+            title: "Panch Jyotirling Yatra by Helicopter",
+            duration: "4 Days & 3 Nights",
+            route:
+                "Ujjain → Omkareshwar → Bhimashankar → Trimbakeshwar → Grishneshwar",
+            price: "2,20,000/-",
+            originalPrice: "2,30,000/-",
+            features: ["VIP Darshan", "Helicopter", "Hotel", "Meals", "Sightseeing"],
+            image: m6,
+        },
+    ];
+
+    return (
+        <div className="tour-container">
+            <h1 className="main-heading">
+                Mahakaleshwar Yatra Tour Helicopter Packages
+            </h1>
+            <div className="divine-line"></div>
+            
+            {/* <p className="sub-heading">Get the most effective and the best Mahakaleshwar Yatra packages. <span className="read-more-link">Read More</span></p> */}
+
+            <div className="package-cards">
+                {
+                    packages.map((pkg, index) => (
+                        <div className="package-card" key={index}>
+                            <div
+                                className="card-image"
+                                style={{ backgroundImage: `url(${pkg.image})` }}
+                            >
+                                <div className="overlay-text">
+                                    <h2>{pkg.title}</h2>
+                                    <span className="highlight-text">By Helicopter</span>
+                                    <button className="itinerary-btn">Complete Itinerary</button>
+                                </div>
+                            </div>
+
+                            <div className="package-details">
+                                <div className="upper-content">
+                                    <h3 className="package-title">{pkg.title}</h3>
+
+                                    <div className="detail-row">
+                                        <div className="icon-wrapper duration">
+                                            <span className="icon">🕒</span>
+                                            <span>{pkg.duration}</span>
+                                        </div>
+                                    </div>
+
+                                    <div className="detail-row">
+                                        <div className="icon-wrapper route">
+                                            <span className="icon">📍</span>
+                                            <span>{pkg.route}</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="lower-content">
+                                    <div className="price-row">
+                                        <span className="price">₹ {pkg.price}</span>
+                                        <span className="original-price">₹ {pkg.originalPrice}</span>
+                                        <span className="per-person">per person</span>
+                                    </div>
+
+                                    <div className="action-buttons">
+                                        <a href="#" className="btn read-more">
+                                            Read More »
+                                        </a>
+                                        <a href="#" className="btn enquiry-now">
+                                            Enquiry Now »
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    ))
+                }
+            </div>
+
+            <style jsx>{`
+        .tour-container {
+          font-family: Arial, sans-serif;
+          max-width: 1400px;
+          margin: 0 auto;
+           padding:20px;
+          box-sizing: border-box;
+          overflow: hidden;
+        }
+
+        .main-heading {
+          font-size: 2.5rem;
+          color: var(--text-dark);
+          margin-bottom: 15px;
+          font-weight: 700;
+          text-align: center;
+          margin-top: 10px;
+        }
+
+        .divine-line {
+          height: 3px;
+          width: 80px;
+          margin: 0 auto;
+          background: linear-gradient(
+            to right,
+            var(--primary-color),
+            var(--secondary-color)
+          );
+          position: relative;
+          margin-bottom: 25px;
+        }
+
+        .sub-heading {
+          text-align: center;
+          margin-bottom: 30px;
+          color: #555;
+        }
+
+        .read-more-link {
+          color: blue;
+          cursor: pointer;
+        }
+
+        .package-cards {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+          gap: 20px;
+          justify-content: center;
+          width: 100%;
+          box-sizing: border-box;
+        }
+
+        .package-card {
+          width: 100%;
+          max-width: 100%;
+          background-color: white;
+          border-radius: 8px;
+          overflow: hidden;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+          display: flex;
+          flex-direction: column;
+          min-height: 480px; /* Minimum height for consistent appearance */
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          box-sizing: border-box;
+        }
+
+        .package-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-image {
+          height: 200px;
+          background-color: #f0f0f0;
+          background-size: cover;
+          background-position: center;
+          position: relative;
+        }
+
+        .overlay-text {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+          color: white;
+          padding: 15px;
+        }
+
+        .overlay-text h2 {
+          margin: 0 0 5px 0;
+          font-size: 20px;
+        }
+
+        .highlight-text {
+          color: #ff6600;
+          font-weight: bold;
+          margin-right:10px;
+        }
+
+        .itinerary-btn {
+          background-color: white;
+          color: #333;
+          border: none;
+          padding: 5px 10px;
+          border-radius: 20px;
+          margin-top: 10px;
+          cursor: pointer;
+          font-size: 12px;
+        }
+
+        .package-details {
+          padding: 15px;
+          display: flex;
+          flex-direction: column;
+          flex-grow: 1;
+          justify-content: space-between;
+        }
+
+        .upper-content {
+          flex-grow: 1;
+        }
+
+        .lower-content {
+          margin-top: auto;
+        }
+
+        .package-title {
+          margin-top: 0;
+          margin-bottom: 15px;
+          color: #333;
+          font-size: 18px;
+
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .detail-row {
+          display: flex;
+          margin-bottom: 10px;
+          color: #555;
+          font-size: 14px;
+        }
+
+        .icon-wrapper {
+          display: flex;
+          align-items: flex-start;
+          width: 100%;
+        }
+
+        .icon {
+          margin-right: 8px;
+          min-width: 20px;
+        }
+
+        .price-row {
+          margin-bottom: 15px;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: baseline;
+        }
+
+        .price {
+          color: #e46e0f;
+          font-weight: bold;
+          font-size: 18px;
+        }
+
+        .original-price {
+          text-decoration: line-through;
+          color: #888;
+          margin-left: 5px;
+          font-size: 16px;
+        }
+
+        .per-person {
+          color: #555;
+          font-size: 14px;
+          margin-left: 5px;
+        }
+
+        .action-buttons {
+          display: flex;
+          gap: 10px;
+        }
+
+        .btn {
+          text-decoration: none;
+          padding: 8px 15px;
+          border-radius: 4px;
+          font-weight: bold;
+          font-size: 14px;
+          text-align: center;
+          display: inline-block;
+          transition: background-color 0.3s ease;
+        }
+
+        .read-more {
+          background-color: #4caf50;
+          color: white;
+          flex: 1;
+        }
+
+        .read-more:hover {
+          background-color: #3d9140;
+        }
+
+        .enquiry-now {
+          background-color: #e46e0f;
+          color: white;
+          flex: 1;
+        }
+
+        .enquiry-now:hover {
+          background-color: #c15c0d;
+        }
+
+        .features {
+          display: flex;
+          justify-content: space-between;
+          border-top: 1px solid #eee;
+          padding-top: 15px;
+        }
+
+        .feature {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          font-size: 12px;
+          color: #555;
+        }
+
+        .feature-icon {
+          width: 24px;
+          height: 24px;
+          background-color: #f0f0f0;
+          border-radius: 50%;
+          margin-bottom: 5px;
+        }
+
+        .floating-chat {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          z-index: 100;
+        }
+
+        .chat-button {
+          background-color: #25d366;
+          color: white;
+          border: none;
+          padding: 10px 20px;
+          border-radius: 30px;
+          font-weight: bold;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .chat-button:before {
+          content: "";
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          background-color: white;
+          border-radius: 50%;
+          margin-right: 10px;
+        }
+
+        /* Improved responsive styles */
+        @media (max-width: 1200px) {
+          .package-cards {
+            grid-template-columns: repeat(3, 1fr);
+          }
+          
+          .main-heading {
+            font-size: 2.2rem;
+          }
+        }
+
+        @media (max-width: 992px) {
+          .package-cards {
+            grid-template-columns: repeat(2, 1fr);
+          }
+          
+          .main-heading {
+            font-size: 2rem;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .package-cards {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+          }
+          
+          .main-heading {
+            font-size: 1.8rem;
+          }
+          
+          .package-card {
+            min-height: 450px;
+          }
+          
+          .price-row {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+          
+          .original-price, .per-person {
+            margin-left: 0;
+            margin-top: 2px;
+          }
+        }
+
+        @media (max-width: 576px) {
+
+
+          .package-cards {
+            grid-template-columns: 1fr;
+          }
+          
+          .package-card {
+            max-width: 100%;
+            min-height: auto;
+          }
+          
+          .action-buttons {
+            flex-direction: column;
+          }
+          
+          .btn {
+            width: 100%;
+          }
+          
+          .main-heading {
+            font-size: 1.5rem;
+          }
+          
+          .tour-container {
+            padding: 40px 20px;
+          }
+          
+          .overlay-text h2 {
+            font-size: 18px;
+          }
+        }
+      `}</style>
+        </div>
+    );
+}
+</file>
+
+<file path="src/global.css">
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    color: var(--text-dark);
+  }
+</file>
+
+<file path="src/index.css">
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+</file>
+
+<file path="src/index.js">
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
+</file>
+
+<file path="src/logo.svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 841.9 595.3"><g fill="#61DAFB"><path d="M666.3 296.5c0-32.5-40.7-63.3-103.1-82.4 14.4-63.6 8-114.2-20.2-130.4-6.5-3.8-14.1-5.6-22.4-5.6v22.3c4.6 0 8.3.9 11.4 2.6 13.6 7.8 19.5 37.5 14.9 75.7-1.1 9.4-2.9 19.3-5.1 29.4-19.6-4.8-41-8.5-63.5-10.9-13.5-18.5-27.5-35.3-41.6-50 32.6-30.3 63.2-46.9 84-46.9V78c-27.5 0-63.5 19.6-99.9 53.6-36.4-33.8-72.4-53.2-99.9-53.2v22.3c20.7 0 51.4 16.5 84 46.6-14 14.7-28 31.4-41.3 49.9-22.6 2.4-44 6.1-63.6 11-2.3-10-4-19.7-5.2-29-4.7-38.2 1.1-67.9 14.6-75.8 3-1.8 6.9-2.6 11.5-2.6V78.5c-8.4 0-16 1.8-22.6 5.6-28.1 16.2-34.4 66.7-19.9 130.1-62.2 19.2-102.7 49.9-102.7 82.3 0 32.5 40.7 63.3 103.1 82.4-14.4 63.6-8 114.2 20.2 130.4 6.5 3.8 14.1 5.6 22.5 5.6 27.5 0 63.5-19.6 99.9-53.6 36.4 33.8 72.4 53.2 99.9 53.2 8.4 0 16-1.8 22.6-5.6 28.1-16.2 34.4-66.7 19.9-130.1 62-19.1 102.5-49.9 102.5-82.3zm-130.2-66.7c-3.7 12.9-8.3 26.2-13.5 39.5-4.1-8-8.4-16-13.1-24-4.6-8-9.5-15.8-14.4-23.4 14.2 2.1 27.9 4.7 41 7.9zm-45.8 106.5c-7.8 13.5-15.8 26.3-24.1 38.2-14.9 1.3-30 2-45.2 2-15.1 0-30.2-.7-45-1.9-8.3-11.9-16.4-24.6-24.2-38-7.6-13.1-14.5-26.4-20.8-39.8 6.2-13.4 13.2-26.8 20.7-39.9 7.8-13.5 15.8-26.3 24.1-38.2 14.9-1.3 30-2 45.2-2 15.1 0 30.2.7 45 1.9 8.3 11.9 16.4 24.6 24.2 38 7.6 13.1 14.5 26.4 20.8 39.8-6.3 13.4-13.2 26.8-20.7 39.9zm32.3-13c5.4 13.4 10 26.8 13.8 39.8-13.1 3.2-26.9 5.9-41.2 8 4.9-7.7 9.8-15.6 14.4-23.7 4.6-8 8.9-16.1 13-24.1zM421.2 430c-9.3-9.6-18.6-20.3-27.8-32 9 .4 18.2.7 27.5.7 9.4 0 18.7-.2 27.8-.7-9 11.7-18.3 22.4-27.5 32zm-74.4-58.9c-14.2-2.1-27.9-4.7-41-7.9 3.7-12.9 8.3-26.2 13.5-39.5 4.1 8 8.4 16 13.1 24 4.7 8 9.5 15.8 14.4 23.4zM420.7 163c9.3 9.6 18.6 20.3 27.8 32-9-.4-18.2-.7-27.5-.7-9.4 0-18.7.2-27.8.7 9-11.7 18.3-22.4 27.5-32zm-74 58.9c-4.9 7.7-9.8 15.6-14.4 23.7-4.6 8-8.9 16-13 24-5.4-13.4-10-26.8-13.8-39.8 13.1-3.1 26.9-5.8 41.2-7.9zm-90.5 125.2c-35.4-15.1-58.3-34.9-58.3-50.6 0-15.7 22.9-35.6 58.3-50.6 8.6-3.7 18-7 27.7-10.1 5.7 19.6 13.2 40 22.5 60.9-9.2 20.8-16.6 41.1-22.2 60.6-9.9-3.1-19.3-6.5-28-10.2zM310 490c-13.6-7.8-19.5-37.5-14.9-75.7 1.1-9.4 2.9-19.3 5.1-29.4 19.6 4.8 41 8.5 63.5 10.9 13.5 18.5 27.5 35.3 41.6 50-32.6 30.3-63.2 46.9-84 46.9-4.5-.1-8.3-1-11.3-2.7zm237.2-76.2c4.7 38.2-1.1 67.9-14.6 75.8-3 1.8-6.9 2.6-11.5 2.6-20.7 0-51.4-16.5-84-46.6 14-14.7 28-31.4 41.3-49.9 22.6-2.4 44-6.1 63.6-11 2.3 10.1 4.1 19.8 5.2 29.1zm38.5-66.7c-8.6 3.7-18 7-27.7 10.1-5.7-19.6-13.2-40-22.5-60.9 9.2-20.8 16.6-41.1 22.2-60.6 9.9 3.1 19.3 6.5 28.1 10.2 35.4 15.1 58.3 34.9 58.3 50.6-.1 15.7-23 35.6-58.4 50.6zM320.8 78.4z"/><circle cx="420.9" cy="296.5" r="45.7"/><path d="M520.5 78.1z"/></g></svg>
+</file>
+
+<file path="src/reportWebVitals.js">
+const reportWebVitals = onPerfEntry => {
+  if (onPerfEntry && onPerfEntry instanceof Function) {
+    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+      getCLS(onPerfEntry);
+      getFID(onPerfEntry);
+      getFCP(onPerfEntry);
+      getLCP(onPerfEntry);
+      getTTFB(onPerfEntry);
+    });
+  }
+};
+
+export default reportWebVitals;
+</file>
+
+<file path="src/setupTests.js">
+// jest-dom adds custom jest matchers for asserting on DOM nodes.
+// allows you to do things like:
+// expect(element).toHaveTextContent(/react/i)
+// learn more: https://github.com/testing-library/jest-dom
+import '@testing-library/jest-dom';
+</file>
+
+</files>

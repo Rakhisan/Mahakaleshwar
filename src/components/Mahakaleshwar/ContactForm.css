@@ -1,0 +1,46 @@
+.container {
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .two-column {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  /* .contact-info,
+  .contact-form {
+    flex: 1 1 45%;
+  }
+   */
+  .info-item {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .info-item i {
+    margin-right: 15px;
+    font-size: 24px;
+    color: #444;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .btn {
+    background-color: #4a148c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
