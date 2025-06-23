@@ -9,6 +9,10 @@ import ma6 from "../images/ma6.jpeg";
 import ma7 from "../images/ma7.webp";
 import ma8 from "../images/ma8.jpg";
 import ma9 from "../images/ma9.jpg";
+import maa1 from "../images/maa1.jpg";
+import maa2 from "../images/maa2.webp";
+import maa3 from "../images/maa3.jpg";
+import maaa1 from "../images/maaa1.png";
 
 export const guideCards = [
   {
@@ -107,7 +111,7 @@ export const hotels = [
   {
     id: 1,
     name: "Hotel Rudraksh",
-    image: "/images/hotel1.jpg",
+    image: maa1,
     price: "₹2500 - ₹5000",
     distance: "0.5 km from Temple",
     rating: 4.5,
@@ -115,7 +119,7 @@ export const hotels = [
   {
     id: 2,
     name: "Shipra Residency",
-    image: "/images/hotel2.jpg",
+    image: maa2,
     price: "₹1800 - ₹3500",
     distance: "1.2 km from Temple",
     rating: 4.2,
@@ -123,7 +127,7 @@ export const hotels = [
   {
     id: 3,
     name: "Ujjain Palace Hotel",
-    image: "/images/hotel3.jpeg",
+    image: maa3,
     price: "₹3500 - ₹8000",
     distance: "0.8 km from Temple",
     rating: 4.7,
@@ -134,7 +138,7 @@ export const packages = [
   {
     id: 1,
     name: "Mahakal Darshan Package",
-    image: "/images/package1.jpg",
+    image: maaa1,
     duration: "1 Day",
     price: "₹999 per person",
     includes: "Temple visit, Bhasma Aarti, Breakfast, Guide",
